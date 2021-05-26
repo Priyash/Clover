@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="messagequeueservice" />
+        <module name="DiscoveryServer" />
+        <module name="datastoreservice" />
+        <module name="storage" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="datastoreservice" target="11" />
+      <module name="DiscoveryServer" target="11" />
+      <module name="messagequeueservice" target="11" />
+      <module name="storage" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="DiscoveryServer" options="-parameters" />
+      <module name="datastoreservice" options="-parameters" />
+      <module name="messagequeueservice" options="-parameters" />
+      <module name="storage" options="-parameters" />
+    </option>
+  </component>
+</project>
