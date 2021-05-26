@@ -1,25 +1,25 @@
-2021-05-24 20:59:23,334 INFO com.clover.store.clover.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 7776 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
-2021-05-24 20:59:23,343 DEBUG com.clover.store.clover.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
-2021-05-24 20:59:23,344 INFO com.clover.store.clover.main.App [main] No active profile set, falling back to default profiles: default
-2021-05-24 20:59:26,074 INFO com.clover.store.clover.main.App [main] Started App in 3.333 seconds (JVM running for 3.993)
-2021-05-24 20:59:35,450 INFO com.clover.store.clover.producer.CloverMessageSender [http-nio-8080-exec-2] Sending : com.clover.store.clover.model.Product@1836a83f
-2021-05-24 20:59:35,451 INFO com.clover.store.clover.producer.CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
-2021-05-24 20:59:35,533 INFO com.clover.store.clover.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.store.clover.model.Product@1836a83f] delivered with offset -6
-2021-05-24 20:59:35,542 INFO com.clover.store.clover.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.store.clover.model.Product@41f7e7a7]
-2021-05-24 23:07:53,094 INFO com.clover.store.clover.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 852 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
-2021-05-24 23:07:53,096 DEBUG com.clover.store.clover.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
-2021-05-24 23:07:53,096 INFO com.clover.store.clover.main.App [main] No active profile set, falling back to default profiles: default
-2021-05-24 23:09:12,281 INFO com.clover.store.clover.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 14732 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
-2021-05-24 23:09:12,284 DEBUG com.clover.store.clover.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
-2021-05-24 23:09:12,284 INFO com.clover.store.clover.main.App [main] No active profile set, falling back to default profiles: default
-2021-05-24 23:23:49,639 INFO com.clover.store.clover.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 12328 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
-2021-05-24 23:23:49,641 DEBUG com.clover.store.clover.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
-2021-05-24 23:23:49,641 INFO com.clover.store.clover.main.App [main] No active profile set, falling back to default profiles: default
-2021-05-24 23:50:41,891 INFO com.clover.store.clover.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 15204 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
-2021-05-24 23:50:41,893 DEBUG com.clover.store.clover.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
-2021-05-24 23:50:41,894 INFO com.clover.store.clover.main.App [main] No active profile set, falling back to default profiles: default
-2021-05-24 23:50:44,295 INFO com.clover.store.clover.main.App [main] Started App in 2.742 seconds (JVM running for 3.223)
-2021-05-24 23:50:58,525 INFO com.clover.store.clover.producer.CloverMessageSender [http-nio-8080-exec-2] Sending : com.clover.store.clover.model.Product@3d868253
-2021-05-24 23:50:58,525 INFO com.clover.store.clover.producer.CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
-2021-05-24 23:50:58,602 INFO com.clover.store.clover.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.store.clover.model.Product@3d868253] delivered with offset -9
-2021-05-24 23:50:58,610 INFO com.clover.store.clover.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.store.clover.model.Product@22326f88]
+2021-05-24 20:59:23,334 INFO App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 7776 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-05-24 20:59:23,343 DEBUG App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-24 20:59:23,344 INFO App [main] No active profile set, falling back to default profiles: default
+2021-05-24 20:59:26,074 INFO App [main] Started App in 3.333 seconds (JVM running for 3.993)
+2021-05-24 20:59:35,450 INFO CloverMessageSender [http-nio-8080-exec-2] Sending : Product@1836a83f
+2021-05-24 20:59:35,451 INFO CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
+2021-05-24 20:59:35,533 INFO CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [Product@1836a83f] delivered with offset -6
+2021-05-24 20:59:35,542 INFO CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [Product@41f7e7a7]
+2021-05-24 23:07:53,094 INFO App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 852 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-05-24 23:07:53,096 DEBUG App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-24 23:07:53,096 INFO App [main] No active profile set, falling back to default profiles: default
+2021-05-24 23:09:12,281 INFO App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 14732 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-05-24 23:09:12,284 DEBUG App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-24 23:09:12,284 INFO App [main] No active profile set, falling back to default profiles: default
+2021-05-24 23:23:49,639 INFO App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 12328 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-05-24 23:23:49,641 DEBUG App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-24 23:23:49,641 INFO App [main] No active profile set, falling back to default profiles: default
+2021-05-24 23:50:41,891 INFO App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 15204 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-05-24 23:50:41,893 DEBUG App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-05-24 23:50:41,894 INFO App [main] No active profile set, falling back to default profiles: default
+2021-05-24 23:50:44,295 INFO App [main] Started App in 2.742 seconds (JVM running for 3.223)
+2021-05-24 23:50:58,525 INFO CloverMessageSender [http-nio-8080-exec-2] Sending : Product@3d868253
+2021-05-24 23:50:58,525 INFO CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
+2021-05-24 23:50:58,602 INFO CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [Product@3d868253] delivered with offset -9
+2021-05-24 23:50:58,610 INFO CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [Product@22326f88]
