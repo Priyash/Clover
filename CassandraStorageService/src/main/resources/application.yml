@@ -1,0 +1,15 @@
+server:
+  port: 8091
+spring:
+  application:
+    name: CassandraStorageService
+config:
+  cassandra:
+    contactPoints: localhost
+    port: 9042
+    keyspace: Product_Keyspace
+    replicationFactor: 1
+    localDatacenter: datacenter1
+    duration: 15000
+    durableWrites: true
+    schema: product-schema.cql

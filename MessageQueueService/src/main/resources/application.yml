@@ -1,0 +1,16 @@
+spring:
+  kafka:
+    topics: cloverMessage
+    containerFactory: ProductKafkaListenerContainerFactory
+    consumer:
+        bootstrapServers: localhost:9092
+        groupID: cloverConsumerGroupID
+        autoOffsetReset: earliest
+        keyDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+        valueDeserializer: org.apache.kafka.common.serialization.StringDeserializer
+    producer:
+        bootstrapServers: localhost:9092
+        keySerializer: org.apache.kafka.common.serialization.StringSerializer
+        valueSerializer: org.apache.kafka.common.serialization.StringSerializer
+        valueJsonSerializer: org.springframework.kafka.support.serializer.JsonSerializer
+

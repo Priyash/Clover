@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.clover.store.spark.CloverSparkService")
+@ComponentScan(basePackages = "com.clover.spark")
 public class App {
 
 	public static void main(String[] args) {

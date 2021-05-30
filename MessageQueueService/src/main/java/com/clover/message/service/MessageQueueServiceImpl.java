@@ -1,6 +1,7 @@
 package com.clover.message.service;
 
 
+import com.clover.message.config.AppConfig;
 import com.clover.message.producer.CloverMessageSender;
 import com.clover.message.model.Product;
 import com.clover.message.consumer.CloverMessageReceiver;
@@ -21,10 +22,13 @@ public class MessageQueueServiceImpl implements MessageQueueService{
     @Autowired
     private CloverMessageReceiver cloverMessageReceiver;
 
+    @Autowired
+    private AppConfig appConfig;
+
     @Override
     public void send(Product product) {
         try {
-            cloverMessageSender.sendMessageWithCallback(product, "cloverMessage");
+            cloverMessageSender.sendMessageWithCallback(product, appConfig.getTopics().get(0));
         } catch (Exception ex) {
             LOG.error("Exception on sending message : {} ", product, ex);
         }

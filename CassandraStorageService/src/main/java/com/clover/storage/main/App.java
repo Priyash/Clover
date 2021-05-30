@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.data.cassandra.CassandraDataAutoCo
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication(exclude = {CassandraAutoConfiguration.class, CassandraDataAutoConfiguration.class})
-@ComponentScan(basePackages = "com.clover.store.storage")
+@ComponentScan(basePackages = "com.clover.storage")
 public class App {
 
 	public static void main(String[] args) {

@@ -4,7 +4,7 @@ import com.clover.storage.main.App;
 import com.datastax.oss.driver.api.core.CqlSessionBuilder;
 import com.datastax.oss.driver.api.core.config.DefaultDriverOption;
 import com.datastax.oss.driver.api.core.config.DriverConfigLoader;
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -28,45 +28,33 @@ import java.util.List;
 @Configuration
 public class CassandraConfig extends AbstractCassandraConfiguration{
 
-    @Value("${config.cassandra.keyspace}")
-    private String keyspace;
-
-    @Value("${config.cassandra.contactpoints}")
-    private String contactPoints;
-
-    @Value("${config.cassandra.port}")
-    private String port;
-
-    @Value("${config.cassandra.replicationFactor}")
-    private int replicationFactor;
-
-    @Value("${config.cassandra.local-datacenter}")
-    private String local_datacenter;
+    @Autowired
+    private CassandraConfigLoader cassandraConfigLoader;
 
     public CassandraConfig(){}
 
     @Override
     protected String getKeyspaceName() {
-        return keyspace;
+        return cassandraConfigLoader.getCassandra().getKeyspace();
     }
 
     @Override
     protected String getLocalDataCenter() {
-        return local_datacenter;
+        return cassandraConfigLoader.getCassandra().getLocalDatacenter();
     }
 
     protected int getReplicationFactor() {
-        return replicationFactor;
+        return cassandraConfigLoader.getCassandra().getReplicationFactor();
     }
 
     @Override
     protected String getContactPoints() {
-        return contactPoints;
+        return cassandraConfigLoader.getCassandra().getContactPoints();
     }
 
     @Override
     protected int getPort() {
-        return Integer.valueOf(port);
+        return Integer.valueOf(cassandraConfigLoader.getCassandra().getPort());
     }
 
     @Override
@@ -89,7 +77,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
             public CqlSessionBuilder configure(CqlSessionBuilder cqlSessionBuilder) {
                 return cqlSessionBuilder
                         .withConfigLoader(DriverConfigLoader.programmaticBuilder().
-                                            withDuration(DefaultDriverOption.REQUEST_TIMEOUT, Duration.ofMillis(15000))
+                                            withDuration(DefaultDriverOption.REQUEST_TIMEOUT, Duration.ofMillis(Integer.valueOf(cassandraConfigLoader.getCassandra().getDuration())))
                                             .build())
                         .addContactPoint(new InetSocketAddress(
                                         getContactPoints(),
@@ -105,7 +93,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
         CreateKeyspaceSpecification specification = CreateKeyspaceSpecification
                 .createKeyspace(getKeyspaceName())
                 .ifNotExists(true)
-                .with(KeyspaceOption.DURABLE_WRITES, true)
+                .with(KeyspaceOption.DURABLE_WRITES, cassandraConfigLoader.getCassandra().isDurableWrites())
                 .withSimpleReplication();
 
         return Arrays.asList(specification);
@@ -122,7 +110,7 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
     protected KeyspacePopulator keyspacePopulator() {
         ResourceKeyspacePopulator keyspacePopulate = new ResourceKeyspacePopulator();
         keyspacePopulate.setSeparator(";");
-        keyspacePopulate.setScripts(new ClassPathResource("product-schema.cql"));
+        keyspacePopulate.setScripts(new ClassPathResource(cassandraConfigLoader.getCassandra().getSchema()));
         return keyspacePopulate;
     }
 

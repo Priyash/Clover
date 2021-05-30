@@ -9,6 +9,9 @@ public class SparkStreamServiceImpl implements SparkStreamService{
     @Autowired
     private SparkStreamExecutorService sparkStreamExecutorService;
 
+    @Autowired
+
+
     public SparkStreamServiceImpl(){}
 
     @Override

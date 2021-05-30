@@ -1,0 +1,35 @@
+server:
+  port: 8090
+
+spring:
+  application:
+    name: CloverSparkService
+
+spark:
+  master: local[*]
+  localhost: 127.0.0.1
+  checkpoint: checkpoint
+  driver:
+    memory: 32g
+    name: spark.driver.memory
+  worker:
+    memory: 25g
+    name: spark.worker.memory
+  executor:
+    memory: 25g
+    name: spark.executor.memory
+  rpc:
+    message:
+      name : spark.rpc.message.maxSize
+      maxSize: 1024
+  kafka:
+    topics: cloverMessage
+    stream:
+      durations: 10
+    broker:
+      name: metadata.broker.list
+      list : localhost:9092
+  cassandra:
+    host: spark.cassandra.connection.host
+
+

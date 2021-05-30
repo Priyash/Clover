@@ -1,6 +1,9 @@
 package com.clover.spark.Service;
 
+import com.clover.spark.Config.SparkConfigLoader;
+import com.clover.spark.Constants.Constants;
 import com.clover.spark.Model.Product;
+import com.clover.spark.client.CloverHttpClient;
 import com.google.gson.Gson;
 import kafka.serializer.StringDecoder;
 import org.apache.commons.lang3.ObjectUtils;
@@ -16,6 +19,8 @@ import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.CompletionException;
 
 @Service
 public class SparkStreamExecutorService implements Serializable {
@@ -30,29 +35,21 @@ public class SparkStreamExecutorService implements Serializable {
 
     private transient JavaStreamingContext javaStreamingContext;
 
-    @Value("${spark.stream.kafka.durations}")
-    private String streamDurationTime;
-
-    @Value("${kafka.broker.list}")
-    private String metadataBrokerList;
-
-    @Value("${spark.kafka.topics}")
-    private String topicsAll;
+    @Autowired
+    private SparkConfigLoader sparkConfigLoader;
 
     public SparkStreamExecutorService(){}
 
-
     @Async("asyncTaskExecutor")
     public void startSparkStreamAsyncTask(){
-
         try {
-            Set<String> topicSet = new HashSet<>(Arrays.asList(topicsAll.split(",")));
+            Set<String> topicSet = new HashSet<>(Arrays.asList(sparkConfigLoader.getKafka().getTopics().split(",")));
 
             Map<String, String> kafkaParams = new HashMap<>();
-            kafkaParams.put("metadata.broker.list", this.metadataBrokerList);
+            kafkaParams.put(sparkConfigLoader.getKafka().getBroker().getName(), sparkConfigLoader.getKafka().getBroker().getList());
 
-            javaStreamingContext = new JavaStreamingContext(javaSparkContext, Durations.seconds(Integer.valueOf(this.streamDurationTime)));
-            javaStreamingContext.checkpoint("checkpoint");
+            javaStreamingContext = new JavaStreamingContext(javaSparkContext, Durations.seconds(Integer.valueOf(sparkConfigLoader.getKafka().getStream().getDurations())));
+            javaStreamingContext.checkpoint(sparkConfigLoader.getCheckpoint());
 
             final JavaPairInputDStream<String, String> stream = KafkaUtils.createDirectStream(javaStreamingContext,
                     String.class, String.class,
@@ -63,12 +60,20 @@ public class SparkStreamExecutorService implements Serializable {
                 List<String> topicDataSet = s.values().collect();
                 for (String topicData : topicDataSet) {
                     Product product = gson.fromJson(topicData, Product.class);
-
+//                    CompletableFuture<String> cassandraInsertFuture = cloverHttpClient.postHttpClient(Constants.CASSANDRA_STREAM_INSERT_URI);
+//                    boolean completedOrTimeout = false;
+//                    while(!completedOrTimeout) {
+//                        if(cassandraInsertFuture.isDone() && !cassandraInsertFuture.isCancelled()){
+//                            completedOrTimeout = true;
+//                        }
+//                    }
+//                    String cassandra_save_result_status = cassandraInsertFuture.get();
                 }
             });
             javaStreamingContext.start();
             javaStreamingContext.awaitTermination();
-
+        } catch (CompletionException cex) {
+            cex.printStackTrace();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

@@ -1,8 +1,10 @@
 package com.clover.message.consumer;
 
+import com.clover.message.config.AppConfig;
 import com.clover.message.model.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
@@ -14,10 +16,14 @@ import java.util.concurrent.CopyOnWriteArrayList;
 public class CloverMessageReceiver {
     private static final Logger LOG = LoggerFactory.getLogger(CloverMessageReceiver.class);
     private List<Product> productList = new CopyOnWriteArrayList<>();
+
+    @Autowired
+    private AppConfig appConfig;
+
     public CloverMessageReceiver(){}
 
-    @KafkaListener(topics = "cloverMessage",
-                   groupId = "clover-consumer-group-ID",
+    @KafkaListener(topics = "#{appConfig.getTopics().get(0)}",
+                   groupId = "#{appConfig.getConsumer().getGroupID()}",
                    containerFactory = "ProductKafkaListenerContainerFactory")
     public void listener(Product product) {
         LOG.info("Listener : [{}]", String.valueOf(product));

@@ -1,8 +1,10 @@
 package com.clover.message.config;
 
+import com.clover.message.main.App;
 import com.clover.message.model.Product;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -16,19 +18,18 @@ import java.util.Map;
 
 @Configuration
 public class CloverProducerConfig {
-
-    @Value("${com.clover.store.messagequeueservice.config.kafka.bootstrap-servers}")
-    private String bootstrapServers;
+    @Autowired
+    private AppConfig appConfig;
 
     @Bean
     public Map<String, Object> producerConfigs() {
         Map<String, Object> props = new HashMap<>();
         props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                bootstrapServers);
+                appConfig.getProducer().getBootstrapServers().get(0));
         props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
-                StringSerializer.class);
+                appConfig.getProducer().getKeySerializer());
         props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
-                StringSerializer.class);
+                appConfig.getProducer().getValueSerializer());
         return props;
     }
 
@@ -45,9 +46,9 @@ public class CloverProducerConfig {
     @Bean
     public Map<String, Object> productProducerConfigs(){
         Map<String, Object> props = new HashMap<>();
-        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, bootstrapServers);
-        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
-        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, JsonSerializer.class);
+        props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, appConfig.getProducer().getBootstrapServers().get(0));
+        props.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, appConfig.getProducer().getKeySerializer());
+        props.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, appConfig.getProducer().getValueJsonSerializer());
         return props;
     }
 
