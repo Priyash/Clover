@@ -1,9 +1,8 @@
 package com.clover.spark.Service;
 
 import com.clover.spark.Config.SparkConfigLoader;
-import com.clover.spark.Constants.Constants;
 import com.clover.spark.Model.Product;
-import com.clover.spark.client.CloverHttpClient;
+import com.clover.spark.util.CassandraUtil;
 import com.google.gson.Gson;
 import kafka.serializer.StringDecoder;
 import org.apache.commons.lang3.ObjectUtils;
@@ -13,13 +12,11 @@ import org.apache.spark.streaming.api.java.JavaPairInputDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka.KafkaUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.util.*;
-import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionException;
 
 @Service
@@ -36,7 +33,10 @@ public class SparkStreamExecutorService implements Serializable {
     private transient JavaStreamingContext javaStreamingContext;
 
     @Autowired
-    private SparkConfigLoader sparkConfigLoader;
+    private transient SparkConfigLoader sparkConfigLoader;
+
+    @Autowired
+    private transient CassandraUtil cassandraUtil;
 
     public SparkStreamExecutorService(){}
 
@@ -60,14 +60,8 @@ public class SparkStreamExecutorService implements Serializable {
                 List<String> topicDataSet = s.values().collect();
                 for (String topicData : topicDataSet) {
                     Product product = gson.fromJson(topicData, Product.class);
-//                    CompletableFuture<String> cassandraInsertFuture = cloverHttpClient.postHttpClient(Constants.CASSANDRA_STREAM_INSERT_URI);
-//                    boolean completedOrTimeout = false;
-//                    while(!completedOrTimeout) {
-//                        if(cassandraInsertFuture.isDone() && !cassandraInsertFuture.isCancelled()){
-//                            completedOrTimeout = true;
-//                        }
-//                    }
-//                    String cassandra_save_result_status = cassandraInsertFuture.get();
+                    String cassandraStreamInsertSaveResult = cassandraUtil.saveToCassandra(product);
+                    System.out.println("Cassandra Stream Insert Result Status : " + cassandraStreamInsertSaveResult);
                 }
             });
             javaStreamingContext.start();

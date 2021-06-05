@@ -19,7 +19,7 @@ public class ProductController {
     @Autowired
     private ProductDAO productDAO;
 
-    //http://localhost:8080/api/v1/product/create
+    //http://localhost:8091/api/v1/product/create
     @RequestMapping(value = "/product/create", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Product> createProduct(@RequestBody Product product){
         if(!ObjectUtils.isEmpty(product)){

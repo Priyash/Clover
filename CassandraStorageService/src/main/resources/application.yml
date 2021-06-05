@@ -11,5 +11,5 @@ config:
     replicationFactor: 1
     localDatacenter: datacenter1
     duration: 15000
-    durableWrites: true
+    durableWrites: false
     schema: product-schema.cql

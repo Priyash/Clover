@@ -11,12 +11,12 @@ public interface Constants {
     static final int DEFAULT_KEEP_ALIVE_TIME = 20 * 1000;
 
     // Connection pool
-    static final int MAX_ROUTE_CONNECTIONS     = 40;
-    static final  int MAX_TOTAL_CONNECTIONS     = 40;
+    static final int MAX_ROUTE_CONNECTIONS = 40;
+    static final  int MAX_TOTAL_CONNECTIONS = 40;
     static final int MAX_LOCALHOST_CONNECTIONS = 80;
 
     //POST URL for storing / persist data in cassandra.
-    static final String CASSANDRA_STREAM_INSERT_URI = "";
+    static final String CASSANDRA_STREAM_INSERT_URI = "http://localhost:8091/api/v1/product/create";
 
     static final String THREAD_NAME_PREFIX = "Async-Clover-";
 }
