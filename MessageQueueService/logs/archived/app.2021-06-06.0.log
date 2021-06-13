@@ -1,0 +1,164 @@
+2021-06-06 00:05:06,477 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] Sending : com.clover.message.model.Product@64967d15
+2021-06-06 00:05:06,481 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] ---------------------------------
+2021-06-06 00:05:06,483 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@64967d15] delivered with offset -5
+2021-06-06 00:05:06,485 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@335bd61f]
+2021-06-06 00:11:22,843 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] Sending : com.clover.message.model.Product@3720c6b5
+2021-06-06 00:11:22,844 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] ---------------------------------
+2021-06-06 00:11:22,848 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@3720c6b5] delivered with offset -6
+2021-06-06 00:11:22,850 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@620f3692]
+2021-06-06 00:14:49,372 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] Sending : com.clover.message.model.Product@7647fc9c
+2021-06-06 00:14:49,373 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
+2021-06-06 00:14:49,374 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@7647fc9c] delivered with offset -6
+2021-06-06 00:14:49,375 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@5a5da6d2]
+2021-06-06 00:24:02,565 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-5] Sending : com.clover.message.model.Product@1045574a
+2021-06-06 00:24:02,566 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-5] ---------------------------------
+2021-06-06 00:24:02,569 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@1045574a] delivered with offset -7
+2021-06-06 00:24:02,570 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@128a587a]
+2021-06-06 00:25:54,410 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] Sending : com.clover.message.model.Product@2219f15
+2021-06-06 00:25:54,411 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] ---------------------------------
+2021-06-06 00:25:54,412 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@2219f15] delivered with offset -7
+2021-06-06 00:25:54,414 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@9823310]
+2021-06-06 00:26:58,924 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] Sending : com.clover.message.model.Product@585dc443
+2021-06-06 00:26:58,924 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] ---------------------------------
+2021-06-06 00:26:58,926 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@585dc443] delivered with offset -8
+2021-06-06 00:26:58,927 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@5bc9021c]
+2021-06-06 00:28:35,152 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-4] Sending : com.clover.message.model.Product@7cce5d9d
+2021-06-06 00:28:35,152 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-4] ---------------------------------
+2021-06-06 00:28:35,153 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@7cce5d9d] delivered with offset -8
+2021-06-06 00:28:35,154 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@1bc0c897]
+2021-06-06 00:29:20,781 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-5] Sending : com.clover.message.model.Product@26e86158
+2021-06-06 00:29:20,781 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-5] ---------------------------------
+2021-06-06 00:29:20,784 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@26e86158] delivered with offset -9
+2021-06-06 00:29:20,785 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@ebddc5f]
+2021-06-06 00:30:31,202 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] Sending : com.clover.message.model.Product@33e95bba
+2021-06-06 00:30:31,202 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] ---------------------------------
+2021-06-06 00:30:31,204 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@33e95bba] delivered with offset -9
+2021-06-06 00:30:31,205 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@163f742b]
+2021-06-06 00:31:50,371 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] Sending : com.clover.message.model.Product@62fca983
+2021-06-06 00:31:50,371 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] ---------------------------------
+2021-06-06 00:31:50,373 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@62fca983] delivered with offset -10
+2021-06-06 00:31:50,375 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@5f55d12]
+2021-06-06 00:34:00,869 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-4] Sending : com.clover.message.model.Product@7e8a04ea
+2021-06-06 00:34:00,870 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-4] ---------------------------------
+2021-06-06 00:34:00,872 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@7e8a04ea] delivered with offset -10
+2021-06-06 00:34:00,873 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@186cb94b]
+2021-06-06 00:38:07,929 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-7] Sending : com.clover.message.model.Product@66f0ac2a
+2021-06-06 00:38:07,930 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-7] ---------------------------------
+2021-06-06 00:38:07,931 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@66f0ac2a] delivered with offset -11
+2021-06-06 00:38:07,932 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@78d3d13d]
+2021-06-06 00:38:43,384 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] Sending : com.clover.message.model.Product@620e605a
+2021-06-06 00:38:43,385 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] ---------------------------------
+2021-06-06 00:38:43,386 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@620e605a] delivered with offset -11
+2021-06-06 00:38:43,387 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@15206c20]
+2021-06-06 00:39:27,634 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] Sending : com.clover.message.model.Product@4fa15b63
+2021-06-06 00:39:27,634 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] ---------------------------------
+2021-06-06 00:39:27,636 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@4fa15b63] delivered with offset -12
+2021-06-06 00:39:27,637 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@3a12be5b]
+2021-06-06 00:40:00,334 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] Sending : com.clover.message.model.Product@21d4cee7
+2021-06-06 00:40:00,334 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] ---------------------------------
+2021-06-06 00:40:00,335 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@21d4cee7] delivered with offset -12
+2021-06-06 00:40:00,336 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@4749feb3]
+2021-06-06 19:00:56,240 INFO com.clover.message.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 14800 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-06 19:00:56,243 DEBUG com.clover.message.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-06 19:00:56,243 INFO com.clover.message.main.App [main] No active profile set, falling back to default profiles: default
+2021-06-06 19:00:59,644 INFO com.clover.message.main.App [main] Started App in 4.024 seconds (JVM running for 4.73)
+2021-06-06 19:05:00,736 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] Sending : com.clover.message.model.Product@1e109cfb
+2021-06-06 19:05:00,736 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] ---------------------------------
+2021-06-06 19:05:00,824 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@1e109cfb] delivered with offset -13
+2021-06-06 19:05:00,834 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@2fcce801]
+2021-06-06 19:06:06,744 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] Sending : com.clover.message.model.Product@5b5772da
+2021-06-06 19:06:06,744 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] ---------------------------------
+2021-06-06 19:06:06,747 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@5b5772da] delivered with offset -13
+2021-06-06 19:06:06,750 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@53e7fb2f]
+2021-06-06 19:06:30,569 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-7] Sending : com.clover.message.model.Product@241797fe
+2021-06-06 19:06:30,569 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-7] ---------------------------------
+2021-06-06 19:06:30,571 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@241797fe] delivered with offset -14
+2021-06-06 19:06:30,573 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@52259ac7]
+2021-06-06 19:07:44,711 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] Sending : com.clover.message.model.Product@4f91b3f0
+2021-06-06 19:07:44,711 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] ---------------------------------
+2021-06-06 19:07:44,713 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@4f91b3f0] delivered with offset -14
+2021-06-06 19:07:44,715 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@3e772d2f]
+2021-06-06 19:08:28,787 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] Sending : com.clover.message.model.Product@730a1993
+2021-06-06 19:08:28,787 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
+2021-06-06 19:08:28,789 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@730a1993] delivered with offset -15
+2021-06-06 19:08:28,791 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@4c2f4cd8]
+2021-06-06 19:09:00,280 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] Sending : com.clover.message.model.Product@2773cdab
+2021-06-06 19:09:00,280 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] ---------------------------------
+2021-06-06 19:09:00,282 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@2773cdab] delivered with offset -15
+2021-06-06 19:09:00,284 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@29723b2]
+2021-06-06 19:11:23,301 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-5] Sending : com.clover.message.model.Product@69170e0f
+2021-06-06 19:11:23,301 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-5] ---------------------------------
+2021-06-06 19:11:23,304 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@69170e0f] delivered with offset -16
+2021-06-06 19:11:23,306 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@118a4e64]
+2021-06-06 19:19:55,269 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] Sending : com.clover.message.model.Product@305d4b79
+2021-06-06 19:19:55,269 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] ---------------------------------
+2021-06-06 19:19:55,276 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@305d4b79] delivered with offset -16
+2021-06-06 19:19:55,280 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@3f49fe35]
+2021-06-06 19:22:14,751 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] Sending : com.clover.message.model.Product@3dda4d4b
+2021-06-06 19:22:14,751 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
+2021-06-06 19:22:14,753 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@3dda4d4b] delivered with offset -17
+2021-06-06 19:22:14,755 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@72eef161]
+2021-06-06 19:22:51,000 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] Sending : com.clover.message.model.Product@3b8cf9d8
+2021-06-06 19:22:51,000 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-1] ---------------------------------
+2021-06-06 19:22:51,002 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@3b8cf9d8] delivered with offset -17
+2021-06-06 19:22:51,003 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@3446b794]
+2021-06-06 19:23:40,503 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-3] Sending : com.clover.message.model.Product@b1b2620
+2021-06-06 19:23:40,503 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-3] ---------------------------------
+2021-06-06 19:23:40,505 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@b1b2620] delivered with offset -18
+2021-06-06 19:23:40,507 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@53e70943]
+2021-06-06 19:30:24,841 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] Sending : com.clover.message.model.Product@51af19aa
+2021-06-06 19:30:24,841 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] ---------------------------------
+2021-06-06 19:30:24,844 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@51af19aa] delivered with offset -18
+2021-06-06 19:30:24,846 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@23afed5c]
+2021-06-06 19:31:30,376 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] Sending : com.clover.message.model.Product@44b329ca
+2021-06-06 19:31:30,376 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] ---------------------------------
+2021-06-06 19:31:30,378 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@44b329ca] delivered with offset -19
+2021-06-06 19:31:30,380 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@264f65b1]
+2021-06-06 19:31:51,422 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] Sending : com.clover.message.model.Product@4569d880
+2021-06-06 19:31:51,423 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] ---------------------------------
+2021-06-06 19:31:51,425 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@4569d880] delivered with offset -19
+2021-06-06 19:31:51,426 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@27348cfb]
+2021-06-06 19:40:03,429 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-3] Sending : com.clover.message.model.Product@76bd5635
+2021-06-06 19:40:03,429 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-3] ---------------------------------
+2021-06-06 19:40:03,432 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@76bd5635] delivered with offset -20
+2021-06-06 19:40:03,434 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@4dd478c1]
+2021-06-06 20:47:18,780 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] Sending : com.clover.message.model.Product@2573dbc0
+2021-06-06 20:47:18,781 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] ---------------------------------
+2021-06-06 20:47:18,785 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@2573dbc0] delivered with offset -20
+2021-06-06 20:47:18,789 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@32fd2a32]
+2021-06-06 20:48:06,254 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-7] Sending : com.clover.message.model.Product@2eeffc8e
+2021-06-06 20:48:06,254 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-7] ---------------------------------
+2021-06-06 20:48:06,256 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@2eeffc8e] delivered with offset -21
+2021-06-06 20:48:06,257 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@5fa2d86f]
+2021-06-06 20:48:24,313 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] Sending : com.clover.message.model.Product@257b2337
+2021-06-06 20:48:24,313 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-8] ---------------------------------
+2021-06-06 20:48:24,315 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@257b2337] delivered with offset -21
+2021-06-06 20:48:24,316 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@36f19c7]
+2021-06-06 20:48:44,021 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] Sending : com.clover.message.model.Product@4e4b42ba
+2021-06-06 20:48:44,021 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] ---------------------------------
+2021-06-06 20:48:44,025 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@4e4b42ba] delivered with offset -22
+2021-06-06 20:48:44,027 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@55204bf2]
+2021-06-06 20:48:51,438 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] Sending : com.clover.message.model.Product@42a76387
+2021-06-06 20:48:51,438 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-9] ---------------------------------
+2021-06-06 20:48:51,441 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@42a76387] delivered with offset -22
+2021-06-06 20:48:51,442 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@ed747de]
+2021-06-06 20:50:58,514 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-3] Sending : com.clover.message.model.Product@5f342493
+2021-06-06 20:50:58,514 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-3] ---------------------------------
+2021-06-06 20:50:58,517 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@5f342493] delivered with offset -23
+2021-06-06 20:50:58,517 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@477f97cb]
+2021-06-06 20:52:06,994 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] Sending : com.clover.message.model.Product@748272b4
+2021-06-06 20:52:06,994 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-6] ---------------------------------
+2021-06-06 20:52:06,996 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@748272b4] delivered with offset -23
+2021-06-06 20:52:06,997 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@3c251fc2]
+2021-06-06 20:53:13,475 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] Sending : com.clover.message.model.Product@56e940cd
+2021-06-06 20:53:13,475 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-10] ---------------------------------
+2021-06-06 20:53:13,477 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@56e940cd] delivered with offset -24
+2021-06-06 20:53:13,478 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@6b8dac6f]
+2021-06-06 21:01:29,421 INFO com.clover.message.main.App [main] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 21424 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-06 21:01:29,423 DEBUG com.clover.message.main.App [main] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-06 21:01:29,423 INFO com.clover.message.main.App [main] No active profile set, falling back to default profiles: default
+2021-06-06 21:01:31,681 INFO com.clover.message.main.App [main] Started App in 2.643 seconds (JVM running for 3.171)
+2021-06-06 21:02:23,231 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] Sending : com.clover.message.model.Product@148dac08
+2021-06-06 21:02:23,231 INFO com.clover.message.producer.CloverMessageSender [http-nio-8080-exec-2] ---------------------------------
+2021-06-06 21:02:23,305 INFO com.clover.message.producer.CloverMessageSender [kafka-producer-network-thread | producer-1] Success Callback: [com.clover.message.model.Product@148dac08] delivered with offset -24
+2021-06-06 21:02:23,314 INFO com.clover.message.consumer.CloverMessageReceiver [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] Listener : [com.clover.message.model.Product@462fb804]

@@ -11,27 +11,6 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class SparkConfig {
 
-    @Value("${spring.application.name}")
-    private String sparkAppName;
-
-//    @Value("${spark.master}")
-//    private String sparkMaster;
-//
-//    @Value("${spark.stream.kafka.durations}")
-//    private String streamDurationTime;
-//
-//    @Value("${spark.driver.memory}")
-//    private String sparkDriverMemory;
-//
-//    @Value("${spark.worker.memory}")
-//    private String sparkWorkerMemory;
-//
-//    @Value("${spark.executor.memory}")
-//    private String sparkExecutorMemory;
-//
-//    @Value("${spark.rpc.message.maxSize}")
-//    private String sparkRpcMessageMaxSize;
-
     @Autowired
     private SparkConfigLoader sparkConfigLoader;
 
@@ -39,7 +18,7 @@ public class SparkConfig {
     @ConditionalOnMissingBean(SparkConf.class)
     public SparkConf sparkConf(){
         SparkConf sparkConf = new SparkConf()
-                                    .setAppName(this.sparkAppName)
+                                    .setAppName(sparkConfigLoader.getAppName())
                                     .set(sparkConfigLoader.getCassandra().getHost(), sparkConfigLoader.getLocalhost())
                                     .setMaster(sparkConfigLoader.getMaster())
                                         .set(sparkConfigLoader.getDriver().getName(), sparkConfigLoader.getDriver().getMemory())

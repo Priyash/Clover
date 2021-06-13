@@ -8,7 +8,11 @@ spring:
 spark:
   master: local[*]
   localhost: 127.0.0.1
+  port: 8090
+  appName: CloverSparkService
   checkpoint: checkpoint
+  httpEntityName: Entity
+  statusCodeName: StatusCode
   driver:
     memory: 32g
     name: spark.driver.memory
@@ -25,11 +29,28 @@ spark:
   kafka:
     topics: cloverMessage
     stream:
-      durations: 10
+      durations: 2
     broker:
       name: metadata.broker.list
       list : localhost:9092
   cassandra:
     host: spark.cassandra.connection.host
+    streamInsertURI: http://localhost:8091/api/v1/product/create
+    durations: 2
+    keyspace: product_keyspace
+    table: product_table
+  constants:
+    timeouts:
+      connectionTimeout: 30000
+      connectionRequestTimeout: 30000
+      socketTimeout: 60000
+      defaultKeepAliveTime: 20000
+      completableFutureTimeoutValue: 10000
+    connectionPool:
+      maxRouteConnections: 40
+      maxTotalConnections: 40
+      maxLocalHostConnections: 80
+    executor:
+      threadNamePrefix: Async-Clover-
 
 

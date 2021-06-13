@@ -1,5 +1,6 @@
 package com.clover.spark.util;
 
+import com.clover.spark.Config.SparkConfigLoader;
 import com.clover.spark.Model.Product;
 import com.google.gson.Gson;
 import org.apache.commons.lang3.ObjectUtils;
@@ -17,6 +18,8 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @Component
@@ -28,25 +31,33 @@ public class CloverHttpClientUtil {
     @Autowired
     private Gson gson;
 
+    @Autowired
+    private SparkConfigLoader sparkConfigLoader;
+
     @Async("asyncTaskExecutor")
-    public CompletableFuture<String> postHttpClient(String URI, Object payload) throws IOException {
-        String result = "";
+    public CompletableFuture<Map<String, Object>> postHttpClient(String URI, Object payload) throws IOException {
+        Map<String, Object> httpMap = new HashMap<>();
         try {
             if(!StringUtils.isEmpty(URI) && (payload instanceof Product)){
                 HttpPost httpPostRequest = new HttpPost(URI);
                 httpPostRequest.addHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE);
                 httpPostRequest.addHeader(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON_VALUE);
                 httpPostRequest.addHeader(HttpHeaders.CONNECTION, "keep-alive");
+
                 String jsonProduct = gson.toJson(payload);
                 StringEntity stringEntity = new StringEntity(jsonProduct);
+
                 httpPostRequest.setEntity(stringEntity);
                 CloseableHttpResponse httpResponse = closeableHttpClient.execute(httpPostRequest);
+
                 System.out.println("Response Status : " + httpResponse.getStatusLine().getStatusCode());
                 HttpEntity entity = httpResponse.getEntity();
                 try {
                     if(!ObjectUtils.isEmpty(entity)){
-                        result = EntityUtils.toString(entity);
-                        return CompletableFuture.completedFuture(result);
+                        String result = EntityUtils.toString(entity);
+                        httpMap.put(sparkConfigLoader.getHttpEntityName(), result);
+                        httpMap.put(sparkConfigLoader.getStatusCodeName(), httpResponse.getStatusLine().getStatusCode());
+                        return CompletableFuture.completedFuture(httpMap);
                     }
                 } catch (Exception ex) {
                     ex.printStackTrace();
@@ -57,6 +68,6 @@ public class CloverHttpClientUtil {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return CompletableFuture.completedFuture(result);
+        return CompletableFuture.completedFuture(httpMap);
     }
 }

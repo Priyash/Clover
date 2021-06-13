@@ -1,0 +1,20 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: ElasticsearchService
+
+elasticsearch:
+  config:
+    localhost: localhost
+    port: 9200
+    mode: http
+  index:
+    indexName: product
+    indexNumberOfShardsKey: index.number_of_shards
+    indexNumberOfShardsValue: 3
+    indexNumberOfReplicaKey: index.number_of_replicas
+    indexNumberOfReplicaValue: 2
+
+

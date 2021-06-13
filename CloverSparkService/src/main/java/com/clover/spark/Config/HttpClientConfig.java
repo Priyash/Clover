@@ -13,6 +13,7 @@ import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicHeaderElementIterator;
 import org.apache.http.protocol.HTTP;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,12 +21,15 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class HttpClientConfig {
 
+    @Autowired
+    private SparkConfigLoader sparkConfigLoader;
+
     @Bean
     public PoolingHttpClientConnectionManager poolingHttpClientConnectionManager(){
         PoolingHttpClientConnectionManager connectionManager = new PoolingHttpClientConnectionManager();
         connectionManager.setDefaultMaxPerRoute(Constants.MAX_ROUTE_CONNECTIONS);
         connectionManager.setMaxTotal(Constants.MAX_TOTAL_CONNECTIONS);
-        HttpHost localHost = new HttpHost("localhost", 8090);
+        HttpHost localHost = new HttpHost(sparkConfigLoader.getLocalhost(), sparkConfigLoader.getPort());
         connectionManager.setMaxPerRoute(new HttpRoute(localHost), Constants.MAX_LOCALHOST_CONNECTIONS);
         return connectionManager;
     }

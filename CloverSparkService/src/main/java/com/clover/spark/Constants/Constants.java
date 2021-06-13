@@ -19,4 +19,5 @@ public interface Constants {
     static final String CASSANDRA_STREAM_INSERT_URI = "http://localhost:8091/api/v1/product/create";
 
     static final String THREAD_NAME_PREFIX = "Async-Clover-";
+    static final long COMPLETABLE_FUTURE_TIMEOUT_VALUE = 10000;
 }

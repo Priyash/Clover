@@ -1,12 +1,6 @@
 package com.clover.spark.Config;
 
 import lombok.Data;
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.context.annotation.Configuration;
-
-import java.util.ArrayList;
-import java.util.List;
-
 
 @Data
 public class SparkConfigLoader {
@@ -18,9 +12,13 @@ public class SparkConfigLoader {
     private SparkConfigLoader.kafka kafka = new SparkConfigLoader.kafka();
     private String master;
     private String localhost;
+    private int port;
+    private String appName;
     private String checkpoint;
+    private String httpEntityName;
+    private String statusCodeName;
     private SparkConfigLoader.cassandra cassandra = new SparkConfigLoader.cassandra();
-
+    private SparkConfigLoader.constants constants = new SparkConfigLoader.constants();
 
     @Data
     public static class driver {
@@ -73,5 +71,38 @@ public class SparkConfigLoader {
     @Data
     public static class cassandra {
         private String host;
+        private String streamInsertURI;
+        private String durations;
+        private String keyspace;
+        private String table;
+    }
+
+    @Data
+    public static class constants {
+        private constants.timeouts timeouts = new constants.timeouts();
+        private constants.connectionPool connectionPool = new constants.connectionPool();
+        private constants.executor executor = new constants.executor();
+
+        @Data
+        public static class timeouts {
+            private Integer connectionTimeout;
+            private Integer connectionRequestTimeout;
+            private Integer socketTimeout;
+            private Integer defaultKeepAliveTime;
+            private Integer completableFutureTimeoutValue;
+
+        }
+
+        @Data
+        public static class connectionPool {
+            private Integer maxRouteConnections;
+            private Integer maxTotalConnections;
+            private Integer maxLocalHostConnections;
+        }
+
+        @Data
+        public static class executor {
+            private String threadNamePrefix;
+        }
     }
 }

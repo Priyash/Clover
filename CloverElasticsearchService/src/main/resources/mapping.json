@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "properties": {
+      "a": {
+        "key" : "a",
+        "type": "integer"
+      },
+      "b": {
+        "key" : "b",
+        "type": "text"
+      }
+    }
+  }
+}
