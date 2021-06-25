@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 public class SparkStreamServiceImpl implements SparkStreamService{
 
     @Autowired
-    private SparkStreamFromKafkaExecutorService sparkStreamFromKafkaExecutorService;
+    private SparkStreamFromKafkaExecutorService kafkaExecutorService;
 
     public SparkStreamServiceImpl(){}
 
     @Override
     public void startStreamAndSaveToCassandra() {
         try {
-            sparkStreamFromKafkaExecutorService.startSparkStreamFromKafkaAndSaveToCassandraAsyncTask();
+            kafkaExecutorService.startSparkStreamFromKafkaAndSaveToCassandraAsyncTask();
         } catch (Exception ex) {
             ex.printStackTrace();
         }

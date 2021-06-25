@@ -1,9 +1,12 @@
 package com.clover.storage.config;
 
 import com.clover.storage.main.App;
+import com.datastax.driver.core.Session;
+import com.datastax.oss.driver.api.core.CqlSession;
 import com.datastax.oss.driver.api.core.CqlSessionBuilder;
 import com.datastax.oss.driver.api.core.config.DefaultDriverOption;
 import com.datastax.oss.driver.api.core.config.DriverConfigLoader;
+import org.apache.spark.streaming.Durations;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.context.annotation.Bean;
@@ -12,6 +15,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.data.cassandra.SessionFactory;
 import org.springframework.data.cassandra.config.*;
 
+import org.springframework.data.cassandra.core.AsyncCassandraOperations;
+import org.springframework.data.cassandra.core.AsyncCassandraTemplate;
 import org.springframework.data.cassandra.core.cql.keyspace.CreateKeyspaceSpecification;
 import org.springframework.data.cassandra.core.cql.keyspace.KeyspaceOption;
 import org.springframework.data.cassandra.core.cql.session.init.CompositeKeyspacePopulator;
@@ -76,8 +81,10 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
             @Override
             public CqlSessionBuilder configure(CqlSessionBuilder cqlSessionBuilder) {
                 return cqlSessionBuilder
-                        .withConfigLoader(DriverConfigLoader.programmaticBuilder().
-                                            withDuration(DefaultDriverOption.REQUEST_TIMEOUT, Duration.ofMillis(Integer.valueOf(cassandraConfigLoader.getCassandra().getDuration())))
+                        .withConfigLoader(DriverConfigLoader.programmaticBuilder()
+                                            .withDuration(DefaultDriverOption.REQUEST_TIMEOUT, Duration.ofMillis(Integer.valueOf(cassandraConfigLoader.getCassandra().getDuration())))
+                                            .withDuration(DefaultDriverOption.CONTROL_CONNECTION_TIMEOUT, Duration.ofMillis(Integer.valueOf(cassandraConfigLoader.getCassandra().getDuration())))
+                                            .withDuration(DefaultDriverOption.CONNECTION_INIT_QUERY_TIMEOUT, Duration.ofMillis(Integer.valueOf(cassandraConfigLoader.getCassandra().getDuration())))
                                             .build())
                         .addContactPoint(new InetSocketAddress(
                                         getContactPoints(),
@@ -99,11 +106,6 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
         return Arrays.asList(specification);
     }
 
-    //DROPPING A KEYSPACE
-//    @Override
-//    protected List<DropKeyspaceSpecification> getKeyspaceDrops() {
-//        return Arrays.asList(DropKeyspaceSpecification.dropKeyspace(getKeyspaceName()));
-//    }
 
     //CREATING THE KEY-COLUMN / TABLE IN CASSANDRA
     @Override
@@ -114,20 +116,21 @@ public class CassandraConfig extends AbstractCassandraConfiguration{
         return keyspacePopulate;
     }
 
-    //DELETING THE KEY-COLUMN / TABLE IN CASSANDRA
-//    @Nullable
-//    @Override
-//    protected KeyspacePopulator keyspaceCleaner() {
-//        return new ResourceKeyspacePopulator(scriptOf("DROP TABLE product_table;"));
-//    }
-
     @Bean
-    SessionFactoryInitializer sessionFactoryInitializer(SessionFactory sessionFactory){
+    protected SessionFactoryInitializer sessionFactoryInitializer(SessionFactory sessionFactory){
         SessionFactoryInitializer initializer = new SessionFactoryInitializer();
         initializer.setSessionFactory(sessionFactory);
         initializer.setKeyspacePopulator(new CompositeKeyspacePopulator(keyspacePopulator()));
         return initializer;
     }
+
+    @Bean
+    public AsyncCassandraTemplate asyncCassandraTemplate(CqlSession session) {
+        return new AsyncCassandraTemplate(session);
+    }
+
+
+
 
 
 

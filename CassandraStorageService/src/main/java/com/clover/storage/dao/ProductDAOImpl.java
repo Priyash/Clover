@@ -1,23 +1,19 @@
 package com.clover.storage.dao;
 
-import com.clover.storage.config.CassandraTemplateCustom;
+import com.clover.storage.repository.CassandraAsyncTemplateCustom;
+import com.clover.storage.repository.CassandraTemplateCustom;
 import com.clover.storage.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
+import org.springframework.stereotype.Service;
 
-@Repository
+@Service
 public class ProductDAOImpl implements ProductDAO{
 
     @Autowired
-    private CassandraTemplateCustom cassandraTemplateCustom;
+    private CassandraAsyncTemplateCustom cassandraAsyncTemplateCustom;
 
     @Override
     public void createProduct(Product product) {
-        cassandraTemplateCustom.create(product);
-    }
-
-    @Override
-    public Product getProduct(String id) {
-        return cassandraTemplateCustom.findById(id, Product.class);
+        cassandraAsyncTemplateCustom.createAsyncProduct(product);
     }
 }

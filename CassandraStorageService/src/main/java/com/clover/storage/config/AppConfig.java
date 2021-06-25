@@ -15,4 +15,10 @@ public class AppConfig {
     public CassandraConfigLoader cassandraConfigLoader(){
         return new CassandraConfigLoader();
     }
+
+    @Bean
+    @ConfigurationProperties("spark")
+    public SparkConfigLoader sparkConfigLoader(){
+        return new SparkConfigLoader();
+    }
 }

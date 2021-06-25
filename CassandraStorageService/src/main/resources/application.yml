@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: CassandraStorageService
+    data:
+      cassandra:
+        jmx-enabled: false
+
 config:
   cassandra:
     contactPoints: localhost
@@ -13,3 +17,52 @@ config:
     duration: 15000
     durableWrites: false
     schema: product-schema.cql
+spark:
+  master: local[*]
+  localhost: 127.0.0.1
+  port: 8090
+  appName: CloverSparkService
+  checkpoint: checkpoint
+  httpEntityName: Entity
+  statusCodeName: StatusCode
+  driver:
+    memory: 32g
+    name: spark.driver.memory
+  worker:
+    memory: 25g
+    name: spark.worker.memory
+  executor:
+    memory: 25g
+    name: spark.executor.memory
+  rpc:
+    message:
+      name : spark.rpc.message.maxSize
+      maxSize: 1024
+  kafka:
+    topics: cloverMessage
+    stream:
+      durations: 5
+    broker:
+      name: metadata.broker.list
+      list : localhost:9092
+  cassandra:
+    host: spark.cassandra.connection.host
+    streamElasticSearchURI: http://localhost:8092/api/v1/index
+    durations: 2
+    keyspace: product_keyspace
+    table: product_table
+  constants:
+    timeouts:
+      connectionTimeout: 30000
+      connectionRequestTimeout: 30000
+      socketTimeout: 60000
+      defaultKeepAliveTime: 20000
+      completableFutureTimeoutValue: 10000
+      cassandraInsertTimeout: 10000
+      sparkStreamingContextTimeout: 10000
+    connectionPool:
+      maxRouteConnections: 40
+      maxTotalConnections: 40
+      maxLocalHostConnections: 80
+    executor:
+      threadNamePrefix: Async-Clover-

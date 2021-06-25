@@ -2,6 +2,7 @@ package com.clover.elasticsearch.config;
 
 import com.clover.elasticsearch.util.IndexMapUtil;
 import org.apache.http.HttpHost;
+import org.elasticsearch.action.ActionListener;
 import org.elasticsearch.action.support.ActiveShardCount;
 import org.elasticsearch.action.support.PlainActionFuture;
 import org.elasticsearch.client.RequestOptions;
@@ -63,23 +64,24 @@ public class ElasticSearchConfig  {
 
 
     @Bean
-    public Boolean createAsyncIndex() {
+    public void createAsyncIndex() {
         CreateIndexResponse response = null;
         try {
-            long startTime = System.currentTimeMillis();
-            PlainActionFuture<CreateIndexResponse> createIndexResponseFuture = new PlainActionFuture<>();
             Boolean isExist = indexMapUtil.isIndexExist(ymlElasticSearchConfig.getIndex().getIndexName(), restHighLevelClient());
-            if(isExist){
-                indexMapUtil.deleteIndex(ymlElasticSearchConfig.getIndex().getIndexName(), restHighLevelClient());
-                isExist = false;
-            }
             if(!isExist) {
-                restHighLevelClient().indices().createAsync(createIndexRequest(), RequestOptions.DEFAULT, createIndexResponseFuture);
-                Boolean isTimeoutOrCompleted = indexMapUtil.isCompleted(createIndexResponseFuture, startTime, "Timeout for creating elasticsearch index has happened during asynchronous call ");
-                if(isTimeoutOrCompleted) {
-                    response = createIndexResponseFuture.actionGet(TimeValue.timeValueMillis(100));
-                    return response.isAcknowledged() && response.isShardsAcknowledged();
-                }
+                restHighLevelClient().indices().createAsync(createIndexRequest(), RequestOptions.DEFAULT, new ActionListener<CreateIndexResponse>() {
+                    @Override
+                    public void onResponse(CreateIndexResponse createIndexResponse) {
+                        System.out.println("Index has been created successfully ");
+                        System.out.println("IsAcknowledged : " + createIndexResponse.isAcknowledged());
+                        System.out.println("IsShardsAcknowledged : " + createIndexResponse.isShardsAcknowledged());
+                    }
+
+                    @Override
+                    public void onFailure(Exception e) {
+                        System.out.println("Exception while creating the index " + e.getMessage());
+                    }
+                });
             }
 
         } catch (CompletionException cex) {
@@ -87,6 +89,5 @@ public class ElasticSearchConfig  {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-        return false;
     }
 }

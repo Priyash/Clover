@@ -23,21 +23,4 @@ public class StorageServiceImpl implements StorageService {
             ex.printStackTrace();
         }
     }
-
-    @Override
-    public Product fetchProduct(String id) {
-        try {
-            if(!StringUtils.isEmpty(id)){
-                Product fetchedProduct = productDAO.getProduct(id);
-                if(!ObjectUtils.isEmpty(fetchedProduct)){
-                    return fetchedProduct;
-                } else {
-                    throw new IllegalStateException("Product Object is null from fetchProduct method ");
-                }
-            }
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
-        return null;
-    }
 }

@@ -52,7 +52,6 @@ public class CassandraUtil {
         } catch (Exception ex) {
             ex.printStackTrace();
         }
-
         return cassandra_save_result_status;
     }
 }
