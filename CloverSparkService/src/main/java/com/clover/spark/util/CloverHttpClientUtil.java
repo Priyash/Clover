@@ -3,6 +3,7 @@ package com.clover.spark.util;
 import com.clover.spark.Config.SparkConfigLoader;
 import com.clover.spark.Model.Product;
 import com.google.gson.Gson;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
@@ -23,6 +24,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @Component
+@Slf4j
 public class CloverHttpClientUtil {
 
     @Autowired
@@ -36,6 +38,7 @@ public class CloverHttpClientUtil {
 
     @Async("asyncTaskExecutor")
     public CompletableFuture<Map<String, Object>> postHttpClient(String URI, Object payload) throws IOException {
+        log.info("Executing the postHttpClient ...");
         Map<String, Object> httpMap = new HashMap<>();
         try {
             if(!StringUtils.isEmpty(URI) && (payload instanceof Product)){

@@ -9,7 +9,6 @@ public class SparkConfigLoader {
     private SparkConfigLoader.worker worker = new worker();
     private SparkConfigLoader.executor executor = new executor();
     private SparkConfigLoader.rpc rpc = new rpc();
-    private SparkConfigLoader.kafka kafka = new kafka();
     private String master;
     private String localhost;
     private int port;
@@ -50,23 +49,6 @@ public class SparkConfigLoader {
         }
     }
 
-    @Data
-    public static class kafka {
-        private String topics;
-        private Stream stream = new Stream();
-        private kafka.broker broker = new broker();
-
-        @Data
-        public static class Stream {
-            private String durations;
-        }
-
-        @Data
-        public static class broker {
-            private String name;
-            private String list;
-        }
-    }
 
     @Data
     public static class cassandra {

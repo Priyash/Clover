@@ -1,0 +1,197 @@
+2021-07-03 00:00:37,392 INFO [823 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 18516 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 00:00:37,423 DEBUG [854 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 00:00:37,424 INFO [855 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 00:00:40,185 INFO [3616] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.241 seconds (JVM running for 3.898)
+2021-07-03 00:00:45,697 INFO [9128] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588325250768896
+2021-07-03 00:00:56,956 INFO [20387] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588372474437632
+2021-07-03 00:00:56,957 INFO [20388] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588372478631936
+2021-07-03 00:01:30,202 INFO [53633] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588511918268416
+2021-07-03 00:01:30,203 ERROR [53634] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:31:30+0000
+2021-07-03 00:01:30,203 ERROR [53634] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:31:30+0000
+2021-07-03 00:01:30,204 INFO [53635] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588511926657024
+2021-07-03 00:01:30,204 ERROR [53635] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:31:30+0000
+2021-07-03 00:01:30,204 ERROR [53635] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:31:30+0000
+2021-07-03 00:01:50,451 ERROR [73882] [http-nio-8080-exec-2] c.c.d.b.ProductImageBuilder [ProductImageBuilder.java:46] Exception while building the product image list
+2021-07-03 00:01:50,454 ERROR [73885] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:31:50+0000
+2021-07-03 00:01:50,455 ERROR [73886] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:31:50+0000
+2021-07-03 00:01:56,292 INFO [960 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 14080 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 00:01:56,302 DEBUG [970 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 00:01:56,303 INFO [971 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 00:01:59,002 INFO [3670] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.228 seconds (JVM running for 3.941)
+2021-07-03 00:02:04,561 INFO [9229] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588656030359552
+2021-07-03 00:02:05,445 INFO [10113] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588659738124288
+2021-07-03 00:02:05,445 INFO [10113] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860588659738124289
+2021-07-03 00:03:35,503 INFO [100171] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589037468753920
+2021-07-03 00:03:35,510 ERROR [100178] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:33:35+0000
+2021-07-03 00:03:35,511 ERROR [100179] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:33:35+0000
+2021-07-03 00:03:35,512 INFO [100180] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589037506502656
+2021-07-03 00:03:35,513 ERROR [100181] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:33:35+0000
+2021-07-03 00:03:35,513 ERROR [100181] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:33:35+0000
+2021-07-03 00:03:35,514 ERROR [100182] [http-nio-8080-exec-2] c.c.d.b.ProductImageBuilder [ProductImageBuilder.java:46] Exception while building the product image list
+2021-07-03 00:03:35,517 ERROR [100185] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:33:35+0000
+2021-07-03 00:03:35,517 ERROR [100185] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:33:35+0000
+2021-07-03 00:04:10,385 INFO [781 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 21040 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 00:04:10,389 DEBUG [785 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 00:04:10,390 INFO [786 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 00:04:12,901 INFO [3297] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.947 seconds (JVM running for 3.642)
+2021-07-03 00:04:20,275 INFO [10671] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589225256132608
+2021-07-03 00:04:21,254 INFO [11650] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589229362356224
+2021-07-03 00:04:21,254 INFO [11650] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589229362356225
+2021-07-03 00:04:22,355 INFO [12751] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589233980284928
+2021-07-03 00:04:22,356 ERROR [12752] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:34:22+0000
+2021-07-03 00:04:22,356 ERROR [12752] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:34:22+0000
+2021-07-03 00:04:31,144 INFO [21540] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860589270844022784
+2021-07-03 00:04:31,145 ERROR [21541] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:34:31+0000
+2021-07-03 00:04:31,146 ERROR [21542] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:34:31+0000
+2021-07-03 00:05:24,156 ERROR [74552] [http-nio-8080-exec-1] c.c.d.b.ProductImageBuilder [ProductImageBuilder.java:46] Exception while building the product image list
+2021-07-03 00:05:30,333 ERROR [80729] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:35:30+0000
+2021-07-03 00:05:30,333 ERROR [80729] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:35:30+0000
+2021-07-03 00:12:19,525 INFO [805 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 13628 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 00:12:19,529 DEBUG [809 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 00:12:19,529 INFO [809 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 00:12:22,040 INFO [3320] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.959 seconds (JVM running for 3.649)
+2021-07-03 00:12:33,383 INFO [14663] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860591293500989440
+2021-07-03 00:12:34,591 INFO [15871] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860591298567708672
+2021-07-03 00:12:34,592 ERROR [15872] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:42:34+0000
+2021-07-03 00:12:34,593 ERROR [15873] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:42:34+0000
+2021-07-03 00:12:34,593 INFO [15873] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860591298576097280
+2021-07-03 00:12:34,593 ERROR [15873] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:42:34+0000
+2021-07-03 00:12:34,594 ERROR [15874] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:42:34+0000
+2021-07-03 00:13:21,307 ERROR [62587] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:43:21+0000
+2021-07-03 00:13:21,308 ERROR [62588] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:43:21+0000
+2021-07-03 00:14:20,654 INFO [660 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 21824 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 00:14:20,657 DEBUG [663 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 00:14:20,657 INFO [663 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 00:14:22,955 INFO [2961] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.655 seconds (JVM running for 3.151)
+2021-07-03 00:14:40,750 INFO [634 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 13132 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 00:14:40,753 DEBUG [637 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 00:14:40,753 INFO [637 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 00:14:43,059 INFO [2943] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.648 seconds (JVM running for 3.12)
+2021-07-03 00:14:50,174 INFO [10058] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860591867244027904
+2021-07-03 00:14:50,183 INFO [10067] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860591867281776640
+2021-07-03 00:14:50,183 ERROR [10067] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:44:50+0000
+2021-07-03 00:14:50,184 ERROR [10068] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:44:50+0000
+2021-07-03 00:14:50,184 INFO [10068] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860591867285970944
+2021-07-03 00:14:50,184 ERROR [10068] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:44:50+0000
+2021-07-03 00:14:50,185 ERROR [10069] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:44:50+0000
+2021-07-03 00:14:50,187 ERROR [10071] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:44:50+0000
+2021-07-03 00:14:50,187 ERROR [10071] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-02T18:44:50+0000
+2021-07-03 15:06:36,317 INFO [827 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 19968 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:06:36,319 DEBUG [829 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:06:36,320 INFO [830 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:06:38,989 INFO [896 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 23860 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:06:38,992 DEBUG [899 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:06:38,993 INFO [900 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:06:39,550 INFO [4060] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.719 seconds (JVM running for 4.372)
+2021-07-03 15:06:41,586 INFO [3493] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.042 seconds (JVM running for 4.587)
+2021-07-03 15:06:55,380 INFO [813 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 12692 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:06:55,384 DEBUG [817 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:06:55,385 INFO [818 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:06:57,919 INFO [3352] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.993 seconds (JVM running for 3.763)
+2021-07-03 15:07:05,747 INFO [11180] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860816411712004096
+2021-07-03 15:07:07,858 INFO [13291] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860816420566179840
+2021-07-03 15:07:07,858 ERROR [13291] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:37:07+0000
+2021-07-03 15:07:07,859 ERROR [13292] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:37:07+0000
+2021-07-03 15:07:07,859 INFO [13292] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860816420570374144
+2021-07-03 15:07:07,859 ERROR [13292] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:37:07+0000
+2021-07-03 15:07:07,860 ERROR [13293] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:37:07+0000
+2021-07-03 15:07:07,863 ERROR [13296] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:37:07+0000
+2021-07-03 15:07:07,863 ERROR [13296] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:37:07+0000
+2021-07-03 15:09:11,934 INFO [137367] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860816940978642944
+2021-07-03 15:09:12,813 ERROR [138246] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:39:12+0000
+2021-07-03 15:09:12,814 ERROR [138247] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:39:12+0000
+2021-07-03 15:09:12,814 INFO [138247] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860816944669630464
+2021-07-03 15:09:12,814 ERROR [138247] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:39:12+0000
+2021-07-03 15:09:12,815 ERROR [138248] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:39:12+0000
+2021-07-03 15:09:12,815 INFO [138248] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860816944673824768
+2021-07-03 15:10:33,020 INFO [218453] [http-nio-8080-exec-4] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817281077977088
+2021-07-03 15:10:37,477 ERROR [222910] [http-nio-8080-exec-4] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:40:37+0000
+2021-07-03 15:10:37,478 ERROR [222911] [http-nio-8080-exec-4] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:40:37+0000
+2021-07-03 15:10:38,478 INFO [223911] [http-nio-8080-exec-4] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817303970488320
+2021-07-03 15:10:38,479 ERROR [223912] [http-nio-8080-exec-4] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:40:38+0000
+2021-07-03 15:10:38,479 ERROR [223912] [http-nio-8080-exec-4] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:40:38+0000
+2021-07-03 15:10:43,126 INFO [228559] [http-nio-8080-exec-4] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817323465613312
+2021-07-03 15:11:05,778 INFO [835 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 9740 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:11:05,783 DEBUG [840 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:11:05,784 INFO [841 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:11:08,327 INFO [3384] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.022 seconds (JVM running for 3.699)
+2021-07-03 15:11:13,694 INFO [8751] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817451672903680
+2021-07-03 15:11:14,135 ERROR [9192] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:41:14+0000
+2021-07-03 15:11:14,136 ERROR [9193] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:41:14+0000
+2021-07-03 15:11:15,182 INFO [10239] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817457918222336
+2021-07-03 15:11:15,183 ERROR [10240] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:41:15+0000
+2021-07-03 15:11:15,184 ERROR [10241] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:41:15+0000
+2021-07-03 15:11:16,167 INFO [11224] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817462049611776
+2021-07-03 15:12:06,923 INFO [832 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 8188 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:12:06,927 DEBUG [836 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:12:06,927 INFO [836 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:12:09,384 INFO [3293] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.936 seconds (JVM running for 3.652)
+2021-07-03 15:12:13,613 INFO [7522] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817702995599360
+2021-07-03 15:12:14,339 ERROR [8248] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:42:14+0000
+2021-07-03 15:12:14,339 ERROR [8248] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:42:14+0000
+2021-07-03 15:12:15,045 INFO [8954] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817709001842688
+2021-07-03 15:12:15,046 ERROR [8955] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:42:15+0000
+2021-07-03 15:12:15,046 ERROR [8955] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:42:15+0000
+2021-07-03 15:12:16,014 INFO [9923] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860817713066123264
+2021-07-03 15:13:21,143 INFO [696 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 23240 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:13:21,145 DEBUG [698 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:13:21,146 INFO [699 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:13:23,556 INFO [3109] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.801 seconds (JVM running for 3.289)
+2021-07-03 15:13:25,278 INFO [4831] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818003580395520
+2021-07-03 15:13:25,287 INFO [4840] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818003618144256
+2021-07-03 15:13:25,287 INFO [4840] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818003618144257
+2021-07-03 15:13:25,288 INFO [4841] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818003622338560
+2021-07-03 15:13:25,289 ERROR [4842] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:43:25+0000
+2021-07-03 15:13:25,290 ERROR [4843] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:43:25+0000
+2021-07-03 15:13:25,290 INFO [4843] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818003630727168
+2021-07-03 15:13:25,290 ERROR [4843] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:43:25+0000
+2021-07-03 15:13:25,291 ERROR [4844] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:43:25+0000
+2021-07-03 15:13:25,293 ERROR [4846] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:43:25+0000
+2021-07-03 15:13:25,293 ERROR [4846] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:43:25+0000
+2021-07-03 15:14:57,996 INFO [664 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 17744 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:14:57,999 DEBUG [667 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:14:57,999 INFO [667 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:15:00,400 INFO [3068] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.751 seconds (JVM running for 3.265)
+2021-07-03 15:15:02,614 INFO [5282] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818411837169664
+2021-07-03 15:15:02,624 INFO [5292] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818411879112704
+2021-07-03 15:15:02,625 INFO [5293] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818411883307008
+2021-07-03 15:15:02,625 INFO [5293] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818411883307009
+2021-07-03 15:15:02,626 ERROR [5294] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:45:02+0000
+2021-07-03 15:15:02,626 ERROR [5294] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:45:02+0000
+2021-07-03 15:15:02,627 INFO [5295] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860818411891695616
+2021-07-03 15:15:02,627 ERROR [5295] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:45:02+0000
+2021-07-03 15:15:02,627 ERROR [5295] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:45:02+0000
+2021-07-03 15:15:02,629 ERROR [5297] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:45:02+0000
+2021-07-03 15:15:02,629 ERROR [5297] [http-nio-8080-exec-2] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:45:02+0000
+2021-07-03 15:18:08,382 INFO [669 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 3408 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-07-03 15:18:08,385 DEBUG [672 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-07-03 15:18:08,385 INFO [672 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-07-03 15:18:10,700 INFO [2987] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.676 seconds (JVM running for 3.181)
+2021-07-03 15:19:29,494 INFO [81781] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819531208826880
+2021-07-03 15:19:29,503 INFO [81790] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819531250769920
+2021-07-03 15:19:29,504 INFO [81791] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819531254964224
+2021-07-03 15:19:29,504 INFO [81791] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819531254964225
+2021-07-03 15:19:29,505 ERROR [81792] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,505 ERROR [81792] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,506 INFO [81793] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819531263352832
+2021-07-03 15:19:29,506 ERROR [81793] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,506 ERROR [81793] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,508 ERROR [81795] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,509 ERROR [81796] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,509 INFO [81796] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819531275935744
+2021-07-03 15:19:29,511 ERROR [81798] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:19:29,511 ERROR [81798] [http-nio-8080-exec-1] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:49:29+0000
+2021-07-03 15:20:10,345 INFO [122632] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819702554533888
+2021-07-03 15:20:10,346 INFO [122633] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819702558728192
+2021-07-03 15:20:10,346 INFO [122633] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819702558728193
+2021-07-03 15:20:10,347 INFO [122634] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819702562922496
+2021-07-03 15:20:10,347 ERROR [122634] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,347 ERROR [122634] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,348 INFO [122635] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819702567116800
+2021-07-03 15:20:10,348 ERROR [122635] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,348 ERROR [122635] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,349 ERROR [122636] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,349 ERROR [122636] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,349 INFO [122636] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860819702571311104
+2021-07-03 15:20:10,350 ERROR [122637] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000
+2021-07-03 15:20:10,350 ERROR [122637] [http-nio-8080-exec-3] c.c.d.u.TimestampGenerator [TimestampGenerator.java:23] generated timestamp: 2021-07-03T09:50:10+0000

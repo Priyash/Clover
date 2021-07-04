@@ -1,0 +1,8 @@
+2021-06-26 14:29:58,738 INFO [765 ] [main] c.c.e.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 13964 (D:\Projects\Clover\CloverElasticsearchService\target\classes started by Priyash in D:\Projects\Clover\CloverElasticsearchService)
+2021-06-26 14:29:58,742 DEBUG [769 ] [main] c.c.e.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-06-26 14:29:58,742 INFO [769 ] [main] c.c.e.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:30:01,350 INFO [3377] [main] c.c.e.m.App [StartupInfoLogger.java:61] Started App in 3.038 seconds (JVM running for 3.68)
+2021-06-26 14:34:10,622 INFO [896 ] [main] c.c.e.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 4100 (D:\Projects\Clover\CloverElasticsearchService\target\classes started by Priyash in D:\Projects\Clover\CloverElasticsearchService)
+2021-06-26 14:34:10,625 DEBUG [899 ] [main] c.c.e.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-06-26 14:34:10,626 INFO [900 ] [main] c.c.e.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:34:13,383 INFO [3657] [main] c.c.e.m.App [StartupInfoLogger.java:61] Started App in 3.301 seconds (JVM running for 3.928)

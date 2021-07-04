@@ -6,14 +6,13 @@ import com.clover.storage.util.ElasticSearchUtil;
 import com.datastax.spark.connector.japi.CassandraRow;
 import com.datastax.spark.connector.japi.rdd.CassandraJavaRDD;
 import com.google.gson.Gson;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.spark.SparkContext;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.api.java.function.Function;
 import org.apache.spark.streaming.Durations;
-import org.apache.spark.streaming.StreamingContextState;
 import org.apache.spark.streaming.api.java.JavaDStream;
-import org.apache.spark.streaming.api.java.JavaInputDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
@@ -26,6 +25,7 @@ import java.util.*;
 import java.util.concurrent.CompletionException;
 
 @Service
+@Slf4j
 public class CassandraStreamService implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -48,10 +48,13 @@ public class CassandraStreamService implements Serializable {
     public void startSparkStreamFromCassandraToElasticsearch() throws InterruptedException {
         try {
             javaStreamingContext = new JavaStreamingContext(JavaSparkContext
-                                                                .fromSparkContext(SparkContext
-                                                                .getOrCreate(javaSparkContext
-                                                                                .getConf())),
-                                                                                Durations.seconds(Integer.valueOf(sparkConfigLoader.getKafka().getStream().getDurations())));
+                                        .fromSparkContext(SparkContext
+                                        .getOrCreate(javaSparkContext
+                                                        .getConf())),
+                                                        Durations.seconds(Integer.valueOf(sparkConfigLoader
+                                                                                        .getConstants()
+                                                                                        .getTimeouts()
+                                                                                        .getSparkStreamingContextTimeout())));
 
             javaStreamingContext.checkpoint(sparkConfigLoader.getCheckpoint());
             CassandraJavaRDD<CassandraRow> cassandraJavaRDD = CassandraJavaUtil
@@ -70,7 +73,7 @@ public class CassandraStreamService implements Serializable {
 
             //Getting the casandra table products data as list
             List<Product> products = productJavaRDD.collect();
-
+            log.info("[CassandraStreamService]Spark streaming context product size: {}", products.size());
             //Converting list to JavaRDD
             JavaRDD<Product> productRDD = javaStreamingContext.sparkContext().parallelize(products);
 
@@ -84,19 +87,21 @@ public class CassandraStreamService implements Serializable {
             //Iterating the RDD and saving it in elasticsearch
             productDStream.foreachRDD(stream -> {
                 List<Product> productList = stream.collect();
-                //http://localhost:8092/api/v1/index
                 if(!ObjectUtils.isEmpty(productList)) {
                     Map<String, Object> elasticSearchSaveResults = elasticSearchUtil.saveToElasticSearch(productList);
-                    System.out.println("Cassandra Stream Insert Result Status : " + elasticSearchSaveResults.get(sparkConfigLoader.getStatusCodeName()));
+                    log.info("[CassandraStreamService]Elasticsearch save result status: {}", elasticSearchSaveResults.get(sparkConfigLoader.getStatusCodeName()));
                 }
             });
 
             javaStreamingContext.start();
-            javaStreamingContext.awaitTerminationOrTimeout(15000);
+            javaStreamingContext.awaitTerminationOrTimeout(sparkConfigLoader
+                                                            .getConstants()
+                                                            .getTimeouts().getSparkStreamingContextTimeout());
+            log.info("[CassandraStreamService]Spark streaming context started!!!");
         } catch (CompletionException cex) {
-            cex.printStackTrace();
+            log.error("[CassandraStreamService]Spark streaming context completion exception ", cex);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            log.error("[CassandraStreamService]Spark streaming context exception ", ex);
         }
     }
 }

@@ -1,6 +1,7 @@
 package com.clover.elasticsearch.config;
 
 import com.clover.elasticsearch.util.IndexMapUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.http.HttpHost;
 import org.elasticsearch.action.ActionListener;
 import org.elasticsearch.action.support.ActiveShardCount;
@@ -20,6 +21,7 @@ import java.util.Map;
 import java.util.concurrent.CompletionException;
 
 @Configuration
+@Slf4j
 public class ElasticSearchConfig  {
     @Autowired
     private ElasticSearchYMLConfig ymlElasticSearchConfig;
@@ -27,14 +29,14 @@ public class ElasticSearchConfig  {
     @Autowired
     private IndexMapUtil indexMapUtil;
 
-    private Boolean isSuccess = false;
-
     @Bean
     //Reference_1 : https://medium.com/@ashish_fagna/getting-started-with-elasticsearch-creating-indices-inserting-values-and-retrieving-data-e3122e9b12c6
     public RestHighLevelClient restHighLevelClient(){
+        log.info("Creating RestHighLevelClient bean...");
         String host = ymlElasticSearchConfig.getConfig().getLocalhost();
         Integer port = ymlElasticSearchConfig.getConfig().getPort();
         String httpMode = ymlElasticSearchConfig.getConfig().getMode();
+        log.info("host: {}, port: {}, httpMode; {}", host, port, httpMode);
         RestHighLevelClient client = new RestHighLevelClient(
                 RestClient.builder(new HttpHost(host,
                                                 port,
@@ -44,6 +46,7 @@ public class ElasticSearchConfig  {
 
     @Bean
     public CreateIndexRequest createIndexRequest() {
+        log.info("Creating elasticsearch index...");
         CreateIndexRequest request = null;
         try {
             request = new CreateIndexRequest(ymlElasticSearchConfig.getIndex().getIndexName());
@@ -53,11 +56,14 @@ public class ElasticSearchConfig  {
             request.setTimeout(TimeValue.timeValueMinutes(2));
             request.setMasterTimeout(TimeValue.timeValueMinutes(1));
             request.waitForActiveShards(ActiveShardCount.DEFAULT);
+            log.info("CreateIndexRequest: {} ", request.toString());
             return request;
         } catch (IndexCreationException iex) {
             iex.fillInStackTrace();
+            log.error("IndexCreationException while creating ElasticSearch Index Request: {} ", iex);
         } catch (Exception ex) {
             ex.printStackTrace();
+            log.error("Exception while creating ElasticSearch Index Request: {} ", ex);
         }
         return request;
     }
@@ -65,6 +71,7 @@ public class ElasticSearchConfig  {
 
     @Bean
     public void createAsyncIndex() {
+        log.info("Creating ElasticSearch Index using createAsync method...");
         CreateIndexResponse response = null;
         try {
             Boolean isExist = indexMapUtil.isIndexExist(ymlElasticSearchConfig.getIndex().getIndexName(), restHighLevelClient());
@@ -72,22 +79,23 @@ public class ElasticSearchConfig  {
                 restHighLevelClient().indices().createAsync(createIndexRequest(), RequestOptions.DEFAULT, new ActionListener<CreateIndexResponse>() {
                     @Override
                     public void onResponse(CreateIndexResponse createIndexResponse) {
-                        System.out.println("Index has been created successfully ");
-                        System.out.println("IsAcknowledged : " + createIndexResponse.isAcknowledged());
-                        System.out.println("IsShardsAcknowledged : " + createIndexResponse.isShardsAcknowledged());
+                        log.info("ElasticSearch index: {} has been created successfully", ymlElasticSearchConfig.getIndex().getIndexName());
+                        log.info("Index acknowledged: {}", createIndexResponse.isAcknowledged());
+                        log.info("Index shards acknowledged: {}", createIndexResponse.isShardsAcknowledged());
                     }
 
                     @Override
                     public void onFailure(Exception e) {
-                        System.out.println("Exception while creating the index " + e.getMessage());
+                        log.error("Failure on creating ElasticSearch index: {} , using createAsyncMethod", ymlElasticSearchConfig.getIndex().getIndexName(), e);
                     }
                 });
             }
 
         } catch (CompletionException cex) {
             cex.printStackTrace();
+            log.error("CompletionException on creating ElasticSearch index: {}", ymlElasticSearchConfig.getIndex().getIndexName(), cex);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            log.error("Exception on creating ElasticSearch index: {}", ymlElasticSearchConfig.getIndex().getIndexName(), ex);
         }
     }
 }

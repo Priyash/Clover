@@ -3,6 +3,7 @@ package com.clover.elasticsearch.util;
 import com.clover.elasticsearch.config.ElasticSearchYMLConfig;
 import com.clover.elasticsearch.config.MappingsConfig;
 import com.google.gson.Gson;
+import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.action.support.IndicesOptions;
 import org.elasticsearch.action.support.PlainActionFuture;
@@ -21,6 +22,7 @@ import java.util.Map;
 import java.util.concurrent.CompletionException;
 
 @Component
+@Slf4j
 public class IndexMapUtil {
 
     private static IndexMapUtil indexMapUtil = null;
@@ -82,7 +84,7 @@ public class IndexMapUtil {
                 return isExist;
             }
         } catch (CompletionException cex) {
-            cex.printStackTrace();
+            log.error("CompletionException while checking ElasticSearch index: {} ", index, cex);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -105,7 +107,7 @@ public class IndexMapUtil {
                 return response.isAcknowledged();
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            log.error("Exception while deleting ElasticSearch index: {} ", index, ex);
         }
         return false;
     }
@@ -121,6 +123,7 @@ public class IndexMapUtil {
             }
 
             if(Math.subtractExact(currentTime, currentTime) > 2000) {
+                log.error("Timed-Out!!! from method isCompleted: {} ", exceptionMessage);
                 throw new CompletionException(new Throwable(exceptionMessage));
             }
         }

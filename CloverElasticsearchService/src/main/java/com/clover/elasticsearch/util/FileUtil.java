@@ -1,6 +1,7 @@
 package com.clover.elasticsearch.util;
 
 import com.google.gson.stream.JsonReader;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.Resource;
@@ -10,6 +11,7 @@ import org.springframework.stereotype.Component;
 import java.io.*;
 
 @Component
+@Slf4j
 public class FileUtil {
 
     @Autowired
@@ -25,11 +27,11 @@ public class FileUtil {
             file = resource.getFile();
             return file;
         } catch (FileNotFoundException fex){
-            fex.printStackTrace();
+            log.error("FileNotFoundException while fetching file: {} ", fileName, fex);
         } catch (IOException iex) {
-            iex.printStackTrace();
+            log.error("IOException while fetching file: {} ", fileName, iex);
         } catch (Exception ex) {
-            ex.printStackTrace();
+            log.error("Exception while fetching file: {} ", fileName, ex);
         }
         return file;
     }

@@ -38,13 +38,6 @@ spark:
     message:
       name : spark.rpc.message.maxSize
       maxSize: 1024
-  kafka:
-    topics: cloverMessage
-    stream:
-      durations: 5
-    broker:
-      name: metadata.broker.list
-      list : localhost:9092
   cassandra:
     host: spark.cassandra.connection.host
     streamElasticSearchURI: http://localhost:8092/api/v1/index
@@ -59,7 +52,7 @@ spark:
       defaultKeepAliveTime: 20000
       completableFutureTimeoutValue: 10000
       cassandraInsertTimeout: 10000
-      sparkStreamingContextTimeout: 10000
+      sparkStreamingContextTimeout: 60000
     connectionPool:
       maxRouteConnections: 40
       maxTotalConnections: 40

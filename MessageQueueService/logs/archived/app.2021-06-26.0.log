@@ -1,0 +1,8 @@
+2021-06-26 13:45:04,560 INFO [665 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 15820 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 13:45:04,563 DEBUG [668 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 13:45:04,564 INFO [669 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 13:45:06,774 INFO [2879] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.584 seconds (JVM running for 3.104)
+2021-06-26 13:45:22,057 INFO [18162] [http-nio-8080-exec-2] c.c.m.p.CloverMessageSender [CloverMessageSender.java:31] Sending : com.clover.message.model.Product@129901dc
+2021-06-26 13:45:22,058 INFO [18163] [http-nio-8080-exec-2] c.c.m.p.CloverMessageSender [CloverMessageSender.java:32] ---------------------------------
+2021-06-26 13:45:22,128 INFO [18233] [kafka-producer-network-thread | producer-1] c.c.m.p.CloverMessageSender [CloverMessageSender.java:39] Success Callback: [com.clover.message.model.Product@129901dc] delivered with offset -3
+2021-06-26 13:45:22,137 INFO [18242] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.c.m.c.CloverMessageReceiver [CloverMessageReceiver.java:29] Listener : [com.clover.message.model.Product@704ce764]

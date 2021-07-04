@@ -3,6 +3,7 @@ package com.clover.storage.util;
 import com.clover.storage.config.SparkConfigLoader;
 import com.clover.storage.model.Product;
 import com.google.gson.Gson;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpEntity;
@@ -24,6 +25,7 @@ import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 
 @Component
+@Slf4j
 public class CloverHttpClientUtil {
 
     @Autowired
@@ -37,6 +39,7 @@ public class CloverHttpClientUtil {
 
     @Async("asyncTaskExecutor")
     public CompletableFuture<Map<String, Object>> postHttpClient(String URI, Object payload) throws IOException {
+        log.info("Post http client call of URI: {}, payload: {}", URI, payload.toString());
         Map<String, Object> httpMap = new HashMap<>();
         try {
             if(!StringUtils.isEmpty(URI) && (payload instanceof List)){
@@ -53,6 +56,7 @@ public class CloverHttpClientUtil {
 
                 System.out.println("Response Status : " + httpResponse.getStatusLine().getStatusCode());
                 HttpEntity entity = httpResponse.getEntity();
+                log.info("Post http client call response status: {}, entity: {]", httpResponse.getStatusLine().getStatusCode(), entity.getContent().toString());
                 try {
                     if(!ObjectUtils.isEmpty(entity)){
                         String result = EntityUtils.toString(entity);
@@ -67,7 +71,7 @@ public class CloverHttpClientUtil {
                 }
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            log.error("Exception while invoking http post call of URI: {}", URI, ex);
         }
         return CompletableFuture.completedFuture(httpMap);
     }

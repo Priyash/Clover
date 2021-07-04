@@ -3,6 +3,7 @@ package com.clover.elasticsearch.service;
 import com.clover.elasticsearch.config.ElasticSearchYMLConfig;
 import com.clover.elasticsearch.model.Product;
 import com.clover.elasticsearch.util.IndexMapUtil;
+import lombok.extern.slf4j.Slf4j;
 import org.elasticsearch.ElasticsearchException;
 import org.elasticsearch.action.ActionListener;
 import org.elasticsearch.action.DocWriteResponse;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
+@Slf4j
 public class IndexingServiceImpl implements IndexingService{
 
     @Autowired
@@ -42,6 +44,8 @@ public class IndexingServiceImpl implements IndexingService{
 
     @Override
     public void bulkIndexProductData(List<Product> products) {
+        log.info("Bulk Indexing started...");
+        log.info("Products data of list: {} of size: {}",String.valueOf(products.toArray().toString()), products.size());
         if(!ObjectUtils.isEmpty(products)) {
             BulkRequest bulkRequest = new BulkRequest();
             products.forEach(product -> {
@@ -55,9 +59,13 @@ public class IndexingServiceImpl implements IndexingService{
                     IndexRequest indexRequest = new IndexRequest(ymlConfig.getIndex().getIndexName())
                             .id(String.valueOf(product.getA()))
                             .source(builder);
+                    log.info("Indexing Request: {}", indexRequest.toString());
+                    log.info("Indexing Request ID: {}", indexRequest.id());
                     bulkRequest.add(indexRequest);
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    log.error("IOException while adding indexing request to bulkRequest of ID: {}", product.getA());
+                } catch (Exception ex) {
+                    log.error("Exception while adding indexing request to bulkRequest of ID: {}", product.getA());
                 }
             });
 
@@ -74,30 +82,32 @@ public class IndexingServiceImpl implements IndexingService{
                             IndexResponse indexResponse = (IndexResponse) itemResponse;
 
                             if (indexResponse.getResult() == DocWriteResponse.Result.CREATED) {
-                                System.out.println("============= Doc has been created =========");
-                                System.out.println("Document has been saved to elasticsearch with ID: " + indexResponse.getId());
-                                System.out.println("=================================================");
+                                log.info("****************** ElasticSearch document has been created ****************");
+                                log.info("ElasticSearch document creation status: {}", indexResponse.status());
+                                log.info("Document has been stored to elasticsearch with index: {}, id: {}", indexResponse.getIndex(), indexResponse.getId());
                             }
 
                             if (bulkItemResponse.isFailed()) {
                                 BulkItemResponse.Failure failure = bulkItemResponse.getFailure();
                                 System.out.println("Bulk response has failed : " + failure.getMessage() + " with ID : " + failure.getId() + " of index " + failure.getIndex());
+                                log.error("FAILURE!!! while storing documents using bulkAsync API");
+                                log.error("Failure status: {}, message: {}, index: {}, id: {}", failure.getStatus(), failure.getMessage(), failure.getId(), failure.getIndex());
                             }
                         }
                     }
 
                     @Override
                     public void onFailure(Exception e) {
-                        System.out.println("Exception while indexing bulk request to elasticsearch : " + e.getMessage());
+                        log.error("FAILURE!!! while indexing bulk request to elasticsearch ", e);
                     }
                 });
 
             } catch (ElasticsearchException esx) {
                 if (esx.status() == RestStatus.CONFLICT) {
-                    esx.printStackTrace();
+                    log.error("ElasticsearchException while indexing bulk request to elasticsearch with index: {}, status: {}", esx.getIndex(), esx.status(), esx);
                 }
             } catch (Exception ex) {
-                ex.printStackTrace();
+                log.error("Exception while indexing bulk request to elasticsearch ", ex);
             }
         }
     }

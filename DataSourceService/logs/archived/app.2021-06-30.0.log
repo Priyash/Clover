@@ -1,0 +1,9 @@
+2021-06-30 22:39:47,068 INFO [965 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 12680 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-06-30 22:39:47,071 DEBUG [968 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-30 22:39:47,071 INFO [968 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-30 22:40:58,446 INFO [787 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 11812 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-06-30 22:40:58,450 DEBUG [791 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-30 22:40:58,451 INFO [792 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-30 22:45:00,343 INFO [829 ] [main] c.c.d.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 24296 (D:\Projects\Clover\DataSourceService\target\classes started by Priyash in D:\Projects\Clover\DataSourceService)
+2021-06-30 22:45:00,347 DEBUG [833 ] [main] c.c.d.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-30 22:45:00,349 INFO [835 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default

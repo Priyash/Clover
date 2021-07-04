@@ -1,45 +1,30 @@
 package com.clover.data.model;
 
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
+import com.clover.data.utility.ProductStatus;
+import lombok.Builder;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.lang.NonNull;
 
-//https://ducmanhphan.github.io/2020-04-06-how-to-apply-builder-pattern-with-inhertitance/
-@JsonDeserialize(builder = Product.ProductBuilder.class)
+import java.util.List;
+
+@Data
+@Builder(toBuilder = true)
+@Document(collection = "PRODUCT_TBL_TEST")
 public class Product {
-    private  int a;
-    private  String b;
-    protected Product(final ProductBuilder<?> builder){
-        this.a = builder.a;
-        this.b = builder.b;
-    }
+    @Id
+    private Long id;
+    private String title;
+    private String description;
+    @NonNull
+    private String created_at;
+    @NonNull
+    private String updated_at;
+    private String vendor;
+    private ProductStatus status;
 
-    public  int getA() {
-        return a;
-    }
-
-    public  String getB() {
-        return b;
-    }
-
-    @JsonPOJOBuilder(buildMethodName = "build", withPrefix = "")
-    public static class ProductBuilder<T extends ProductBuilder<T>> {
-        private  int a;
-        private  String b;
-
-        public ProductBuilder(){}
-
-        public T a(int a) {
-            this.a = a;
-            return (T)this;
-        }
-
-        public T b(String b) {
-            this.b = b;
-            return (T)this;
-        }
-
-        public Product build(){
-            return new Product(this);
-        }
-    }
+    private List<Option> options;
+    private List<ProductVariant> variants;
+    private List<ProductImage> images;
 }

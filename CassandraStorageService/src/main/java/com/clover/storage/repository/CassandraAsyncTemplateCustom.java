@@ -51,7 +51,7 @@ public class CassandraAsyncTemplateCustom {
         insertResultFuture.addCallback(new ListenableFutureCallback<EntityWriteResult<T>>() {
             @Override
             public void onSuccess(EntityWriteResult<T> entityWriteResult) {
-                System.out.println("Write has been done successfully " + entityWriteResult.getRows().toString());
+                System.out.println("Write has been done successfully " + entityWriteResult.getEntity().toString());
             }
 
             @Override
