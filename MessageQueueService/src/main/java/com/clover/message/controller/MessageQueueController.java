@@ -22,12 +22,12 @@ public class MessageQueueController {
     @RequestMapping(value = "/publish", method = RequestMethod.POST, consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Product> publishMessage(@RequestBody Product product) {
         messageQueueService.send(product);
-        return new ResponseEntity<Product>(product, HttpStatus.CREATED);
+        return new ResponseEntity<Product>(product, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/receive", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<Product>> receiveMessages(){
         List<Product> productList = messageQueueService.receive();
-        return new ResponseEntity<List<Product>>(productList, HttpStatus.CREATED);
+        return new ResponseEntity<List<Product>>(productList, HttpStatus.OK);
     }
 }

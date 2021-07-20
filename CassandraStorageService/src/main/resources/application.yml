@@ -11,12 +11,13 @@ config:
   cassandra:
     contactPoints: localhost
     port: 9042
-    keyspace: Product_Keyspace
+    keyspace: product_db_test
     replicationFactor: 1
     localDatacenter: datacenter1
     duration: 15000
     durableWrites: false
     schema: product-schema.cql
+    tableName: product_tbl_test
 spark:
   master: local[*]
   localhost: 127.0.0.1
@@ -42,8 +43,8 @@ spark:
     host: spark.cassandra.connection.host
     streamElasticSearchURI: http://localhost:8092/api/v1/index
     durations: 2
-    keyspace: product_keyspace
-    table: product_table
+    keyspace: product_db_test
+    table: product_tbl_test
   constants:
     timeouts:
       connectionTimeout: 30000
@@ -51,7 +52,7 @@ spark:
       socketTimeout: 60000
       defaultKeepAliveTime: 20000
       completableFutureTimeoutValue: 10000
-      cassandraInsertTimeout: 10000
+      cassandraInsertOrUpdateTimeout: 10000
       sparkStreamingContextTimeout: 60000
     connectionPool:
       maxRouteConnections: 40

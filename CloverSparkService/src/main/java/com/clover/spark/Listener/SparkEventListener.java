@@ -15,7 +15,6 @@ public class SparkEventListener {
 
     @EventListener
     public void onStartUp(final ApplicationReadyEvent event){
-        System.out.println("Stream starting from onStartUp");
         log.info("Spark streaming started on Application startup..");
         sparkStreamService.startStreamAndSaveToCassandra();
     }

@@ -1,24 +1,20 @@
 package com.clover.message.model;
 
+import lombok.Data;
+
+import java.util.List;
+
+@Data
 public class Product {
-    private  int a;
-    private  String b;
+    private Long id;
+    private String title;
+    private String description;
+    private String created_at;
+    private String updated_at;
+    private String vendor;
+    private ProductStatus status;
 
-    public Product(){}
-
-    public int getA() {
-        return a;
-    }
-
-    public String getB() {
-        return b;
-    }
-
-    public void setA(int a) {
-        this.a = a;
-    }
-
-    public void setB(String b) {
-        this.b = b;
-    }
+    private List<ProductOption> options;
+    private List<ProductVariant> variants;
+    private List<ProductImage> images;
 }

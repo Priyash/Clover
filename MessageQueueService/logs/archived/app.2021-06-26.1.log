@@ -1,0 +1,36 @@
+2021-06-26 13:48:59,938 INFO [676 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 3276 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 13:48:59,940 DEBUG [678 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 13:48:59,941 INFO [679 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 13:49:02,189 INFO [2927] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.625 seconds (JVM running for 3.17)
+2021-06-26 13:53:23,330 INFO [666 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 18124 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 13:53:23,334 DEBUG [670 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 13:53:23,334 INFO [670 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 13:53:25,599 INFO [2935] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.621 seconds (JVM running for 3.168)
+2021-06-26 13:57:29,323 INFO [675 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 4440 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 13:57:29,327 DEBUG [679 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 13:57:29,327 INFO [679 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 13:57:31,609 INFO [2961] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.656 seconds (JVM running for 3.189)
+2021-06-26 14:04:43,469 INFO [661 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 16616 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 14:04:43,471 DEBUG [663 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 14:04:43,471 INFO [663 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:04:45,674 INFO [2866] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.553 seconds (JVM running for 3.066)
+2021-06-26 14:04:59,947 INFO [691 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 1860 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 14:04:59,950 DEBUG [694 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 14:04:59,950 INFO [694 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:05:02,195 INFO [2939] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.608 seconds (JVM running for 3.163)
+2021-06-26 14:05:18,222 INFO [661 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 19128 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 14:05:18,225 DEBUG [664 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 14:05:18,225 INFO [664 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:05:20,465 INFO [2904] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.6 seconds (JVM running for 3.13)
+2021-06-26 14:21:13,734 INFO [657 ] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 3700 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 14:21:13,737 DEBUG [660 ] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 14:21:13,737 INFO [660 ] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:21:15,947 INFO [2870] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 2.566 seconds (JVM running for 3.097)
+2021-06-26 14:33:23,232 INFO [1006] [main] c.c.m.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 17612 (D:\Projects\Clover\MessageQueueService\target\classes started by Priyash in D:\Projects\Clover\MessageQueueService)
+2021-06-26 14:33:23,235 DEBUG [1009] [main] c.c.m.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-06-26 14:33:23,236 INFO [1010] [main] c.c.m.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:33:25,721 INFO [3495] [main] c.c.m.m.App [StartupInfoLogger.java:61] Started App in 3.028 seconds (JVM running for 3.798)
+2021-06-26 14:34:39,963 INFO [77737] [http-nio-8080-exec-3] c.c.m.p.CloverMessageSender [CloverMessageSender.java:32] Sending : com.clover.message.model.Product@5596e081
+2021-06-26 14:34:39,963 INFO [77737] [http-nio-8080-exec-3] c.c.m.p.CloverMessageSender [CloverMessageSender.java:33] ---------------------------------
+2021-06-26 14:34:40,193 INFO [77967] [kafka-producer-network-thread | producer-1] c.c.m.p.CloverMessageSender [CloverMessageSender.java:40] Success Callback: [com.clover.message.model.Product@5596e081] delivered with offset -4
+2021-06-26 14:34:40,200 INFO [77974] [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] c.c.m.c.CloverMessageReceiver [CloverMessageReceiver.java:31] Listener : [com.clover.message.model.Product@1727a469]

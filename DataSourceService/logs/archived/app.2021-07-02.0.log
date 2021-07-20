@@ -92,9 +92,9 @@ java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to com.goog
 2021-07-02 23:36:16,959 INFO [840 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:36:19,392 INFO [3273] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.882 seconds (JVM running for 3.588)
 2021-07-02 23:36:29,289 INFO [13170] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860582216632868864
-2021-07-02 23:36:50,805 ERROR [34686] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:36:50,805 ERROR [34686] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:41)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -209,9 +209,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:37:14,200 INFO [911 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:37:16,674 INFO [3385] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.945 seconds (JVM running for 3.708)
 2021-07-02 23:37:24,831 INFO [11542] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860582449592901632
-2021-07-02 23:37:28,426 ERROR [15137] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:37:28,426 ERROR [15137] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:41)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -326,9 +326,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:37:59,766 INFO [805 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:38:02,213 INFO [3252] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.9 seconds (JVM running for 3.651)
 2021-07-02 23:38:06,494 INFO [7533] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860582624335994880
-2021-07-02 23:38:07,952 ERROR [8991] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:38:07,952 ERROR [8991] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:41)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -443,9 +443,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:39:09,678 INFO [838 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:39:12,153 INFO [3313] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.951 seconds (JVM running for 3.682)
 2021-07-02 23:39:16,110 INFO [7270] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860582916330856448
-2021-07-02 23:39:16,945 ERROR [8105] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:39:16,945 ERROR [8105] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:41)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -560,9 +560,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:40:14,627 INFO [819 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:40:17,114 INFO [3306] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.943 seconds (JVM running for 3.625)
 2021-07-02 23:40:27,662 INFO [13854] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860583216441696256
-2021-07-02 23:40:28,968 ERROR [15160] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:40:28,968 ERROR [15160] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:41)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -681,9 +681,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:41:40,942 INFO [804 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:41:43,377 INFO [3239] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.875 seconds (JVM running for 3.784)
 2021-07-02 23:41:47,645 INFO [7507] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860583551914713088
-2021-07-02 23:41:48,601 ERROR [8463] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:41:48,601 ERROR [8463] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:43)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -798,9 +798,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:42:22,912 INFO [790 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:42:25,365 INFO [3243] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.893 seconds (JVM running for 3.598)
 2021-07-02 23:42:38,247 INFO [16125] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860583764150689792
-2021-07-02 23:42:39,193 ERROR [17071] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:42:39,193 ERROR [17071] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:43)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -915,9 +915,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:43:04,821 INFO [810 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:43:07,386 INFO [3375] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.032 seconds (JVM running for 3.73)
 2021-07-02 23:43:12,916 INFO [8905] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860583909567209472
-2021-07-02 23:43:13,784 ERROR [9773] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:43:13,784 ERROR [9773] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:42)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:40)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -1032,9 +1032,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:44:17,785 INFO [807 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:44:20,350 INFO [3372] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 3.017 seconds (JVM running for 3.759)
 2021-07-02 23:44:23,981 INFO [7003] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860584207635423232
-2021-07-02 23:44:24,911 ERROR [7933] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:44:24,911 ERROR [7933] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:43)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:37)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -1149,9 +1149,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:44:43,013 INFO [821 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:44:45,516 INFO [3324] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.962 seconds (JVM running for 3.695)
 2021-07-02 23:44:50,205 INFO [8013] [http-nio-8080-exec-3] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860584317626851328
-2021-07-02 23:44:50,880 ERROR [8688] [http-nio-8080-exec-3] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:44:50,880 ERROR [8688] [http-nio-8080-exec-3] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:43)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:37)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -1266,9 +1266,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:46:43,363 INFO [775 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:46:45,845 INFO [3257] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.918 seconds (JVM running for 3.607)
 2021-07-02 23:46:49,940 INFO [7352] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860584819831840768
-2021-07-02 23:46:50,406 ERROR [7818] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:46:50,406 ERROR [7818] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:42)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:36)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -1383,9 +1383,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:49:11,469 INFO [795 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:49:13,984 INFO [3310] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.955 seconds (JVM running for 3.623)
 2021-07-02 23:49:25,956 INFO [15282] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860585474206179328
-2021-07-02 23:49:25,966 ERROR [15292] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:49:25,966 ERROR [15292] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:42)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:36)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -1500,9 +1500,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:50:02,040 INFO [810 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:50:04,553 INFO [3323] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.976 seconds (JVM running for 3.705)
 2021-07-02 23:50:09,324 INFO [8094] [http-nio-8080-exec-1] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860585656104755200
-2021-07-02 23:50:10,470 ERROR [9240] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building options object
+2021-07-02 23:50:10,470 ERROR [9240] [http-nio-8080-exec-1] c.c.d.b.OptionsBuilder [OptionsBuilder.java:43] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:31)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:31)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:42)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:34)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)
@@ -1568,9 +1568,9 @@ java.lang.NullPointerException: null
 2021-07-02 23:51:36,176 INFO [820 ] [main] c.c.d.m.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
 2021-07-02 23:51:38,670 INFO [3314] [main] c.c.d.m.App [StartupInfoLogger.java:61] Started App in 2.951 seconds (JVM running for 3.668)
 2021-07-02 23:51:42,626 INFO [7270] [http-nio-8080-exec-2] c.c.d.u.SequenceGenerator [SequenceGenerator.java:112] Generated new sequence id: 860586047445901312
-2021-07-02 23:52:37,785 ERROR [62429] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:46] Exception while building options object
+2021-07-02 23:52:37,785 ERROR [62429] [http-nio-8080-exec-2] c.c.d.b.OptionsBuilder [OptionsBuilder.java:46] Exception while building productOptions object
 java.lang.NullPointerException: null
-	at com.clover.data.builder.OptionsBuilder.buildOptions(OptionsBuilder.java:34)
+	at com.clover.data.builder.ProductOptionBuilder.buildOptions(OptionsBuilder.java:34)
 	at com.clover.data.builder.ProductBuilder.buildProduct(ProductBuilder.java:42)
 	at com.clover.data.service.MongoServiceImpl.createProductEntry(MongoServiceImpl.java:34)
 	at com.clover.data.controller.MongoController.createProduct(MongoController.java:28)

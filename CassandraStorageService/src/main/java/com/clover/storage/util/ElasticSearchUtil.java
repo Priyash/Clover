@@ -2,6 +2,7 @@ package com.clover.storage.util;
 
 import com.clover.storage.config.SparkConfigLoader;
 import com.clover.storage.model.Product;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -15,6 +16,7 @@ import java.util.concurrent.CompletionException;
 import java.util.concurrent.ExecutionException;
 
 @Component
+@Slf4j
 public class ElasticSearchUtil {
 
     @Autowired
@@ -51,7 +53,7 @@ public class ElasticSearchUtil {
                 elasticSearchIndexingFuture.completeExceptionally(cex);
             }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            log.error("Exception while elasticSearchIndexingFuture for saving records in cassandra ", ex);
         }
 
         return elasticSearchSaveResults;

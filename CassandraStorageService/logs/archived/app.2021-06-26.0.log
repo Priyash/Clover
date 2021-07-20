@@ -1,0 +1,8 @@
+2021-06-26 14:32:47,147 INFO [893 ] [main] c.c.s.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 6380 (D:\Projects\Clover\CassandraStorageService\target\classes started by Priyash in D:\Projects\Clover\CassandraStorageService)
+2021-06-26 14:32:47,150 DEBUG [896 ] [main] c.c.s.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-26 14:32:47,150 INFO [896 ] [main] c.c.s.m.App [SpringApplication.java:659] No active profile set, falling back to default profiles: default
+2021-06-26 14:32:53,069 INFO [6815] [main] c.c.s.m.App [StartupInfoLogger.java:61] Started App in 6.431 seconds (JVM running for 7.256)
+2021-06-26 14:33:50,462 INFO [986 ] [main] c.c.s.m.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 14916 (D:\Projects\Clover\CassandraStorageService\target\classes started by Priyash in D:\Projects\Clover\CassandraStorageService)
+2021-06-26 14:33:50,465 DEBUG [989 ] [main] c.c.s.m.App [StartupInfoLogger.java:56] Running with Spring Boot v2.5.1, Spring v5.3.8
+2021-06-26 14:33:50,466 INFO [990 ] [main] c.c.s.m.App [SpringApplication.java:659] No active profile set, falling back to default profiles: default
+2021-06-26 14:33:56,756 INFO [7280] [main] c.c.s.m.App [StartupInfoLogger.java:61] Started App in 6.89 seconds (JVM running for 7.674)

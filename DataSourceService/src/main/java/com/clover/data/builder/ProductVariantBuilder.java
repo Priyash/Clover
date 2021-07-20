@@ -1,17 +1,16 @@
 package com.clover.data.builder;
 
-import com.clover.data.model.Option;
 import com.clover.data.model.Product;
 import com.clover.data.model.ProductVariant;
+import com.clover.data.utility.CopyFields;
 import com.clover.data.utility.Generator;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
-import org.springframework.web.bind.annotation.PostMapping;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +34,7 @@ public class ProductVariantBuilder implements Builder<List<ProductVariant>, Prod
     @Override
     public List<ProductVariant> build(Map<String, Object> objectMap) {
         List<ProductVariant> variants = new ArrayList<>();
+        Long product_id = (Long) objectMap.get("product_id");
         try {
             List<Map<String, Object>> productVariants = (List<Map<String, Object>>) objectMap.get("variants");
             if(!ObjectUtils.isEmpty(productVariants)) {
@@ -42,6 +42,7 @@ public class ProductVariantBuilder implements Builder<List<ProductVariant>, Prod
                     String productVariantJsonMap = gson.toJson(variant);
                     ProductVariant productVariant = gson.fromJson(productVariantJsonMap, ProductVariant.class);
                     ProductVariant updatedVariant = this.buildProductVariant(productVariant);
+                    updatedVariant.setProduct_id(product_id);
                     variants.add(updatedVariant);
                 });
                 return variants;
@@ -68,11 +69,6 @@ public class ProductVariantBuilder implements Builder<List<ProductVariant>, Prod
         } catch (Exception ex) {
             log.error("Exception while building the default product variant ", ex);
         }
-        return null;
-    }
-
-    @Override
-    public List<ProductVariant> updateObject(Product product, Map<String, Object> objectMap) {
         return null;
     }
 
@@ -103,6 +99,31 @@ public class ProductVariantBuilder implements Builder<List<ProductVariant>, Prod
         } catch (Exception ex) {
             log.error("Exception while generating the title of partially updated product variant of id: {}, product_id: {}",
                     partialProductVariant.getId(), partialProductVariant.getProduct_id(), ex);
+        }
+        return null;
+    }
+
+    @Override
+    public List<ProductVariant> updateObject(Product product, Map<String, Object> objectMap) {
+        try {
+            List<Map<String, Object>> srcVariants = (List<Map<String, Object>>) objectMap.get("variants");
+            List<ProductVariant> dstVariants = product.getVariants();
+
+            if(!ObjectUtils.isEmpty(srcVariants) && !ObjectUtils.isEmpty(dstVariants)) {
+                srcVariants.forEach(srcVariant -> {
+                    dstVariants.forEach(dstVariant -> {
+                        if(srcVariant.get("id").equals(dstVariant.getId())) {
+                            String srcVariantJsonMap = gson.toJson(srcVariant);
+                            ProductVariant srcProductVariant = gson.fromJson(srcVariantJsonMap, ProductVariant.class);
+                            BeanUtils.copyProperties(srcProductVariant, dstVariant, CopyFields.getNullPropertyNames(srcProductVariant));
+                            dstVariant.setUpdated_at((String) timeStampGenerator.generate());
+                        }
+                    });
+                });
+            }
+            return dstVariants;
+        } catch (Exception ex) {
+            log.error("Exception while updating the product variant ", ex);
         }
         return null;
     }

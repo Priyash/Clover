@@ -1,0 +1,20 @@
+2021-06-26 14:26:24,012 INFO [733 ] [main] c.c.s.M.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 2472 (D:\Projects\Clover\CloverSparkService\target\classes started by Priyash in D:\Projects\Clover\CloverSparkService)
+2021-06-26 14:26:24,015 DEBUG [736 ] [main] c.c.s.M.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-06-26 14:26:24,015 INFO [736 ] [main] c.c.s.M.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:26:27,979 INFO [4700] [main] c.c.s.M.App [StartupInfoLogger.java:61] Started App in 4.386 seconds (JVM running for 5.079)
+2021-06-26 14:28:02,858 INFO [733 ] [main] c.c.s.M.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 17700 (D:\Projects\Clover\CloverSparkService\target\classes started by Priyash in D:\Projects\Clover\CloverSparkService)
+2021-06-26 14:28:02,861 DEBUG [736 ] [main] c.c.s.M.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-06-26 14:28:02,862 INFO [737 ] [main] c.c.s.M.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:28:06,920 INFO [4795] [main] c.c.s.M.App [StartupInfoLogger.java:61] Started App in 4.472 seconds (JVM running for 5.173)
+2021-06-26 14:28:06,922 INFO [4797] [main] c.c.s.L.SparkEventListener [SparkEventListener.java:19] Spark streaming started on Application StartUP..
+2021-06-26 14:32:15,960 INFO [805 ] [main] c.c.s.M.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 21696 (D:\Projects\Clover\CloverSparkService\target\classes started by Priyash in D:\Projects\Clover\CloverSparkService)
+2021-06-26 14:32:15,964 DEBUG [809 ] [main] c.c.s.M.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-06-26 14:32:15,964 INFO [809 ] [main] c.c.s.M.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:32:20,052 INFO [4897] [main] c.c.s.M.App [StartupInfoLogger.java:61] Started App in 4.568 seconds (JVM running for 5.282)
+2021-06-26 14:32:20,054 INFO [4899] [main] c.c.s.L.SparkEventListener [SparkEventListener.java:19] Spark streaming started on Application startup..
+2021-06-26 14:33:37,580 INFO [816 ] [main] c.c.s.M.App [StartupInfoLogger.java:55] Starting App using Java 1.8.0_291 on DESKTOP-1SBRRM8 with PID 14228 (D:\Projects\Clover\CloverSparkService\target\classes started by Priyash in D:\Projects\Clover\CloverSparkService)
+2021-06-26 14:33:37,583 DEBUG [819 ] [main] c.c.s.M.App [StartupInfoLogger.java:56] Running with Spring Boot v2.4.3, Spring v5.3.4
+2021-06-26 14:33:37,584 INFO [820 ] [main] c.c.s.M.App [SpringApplication.java:660] No active profile set, falling back to default profiles: default
+2021-06-26 14:33:41,709 INFO [4945] [main] c.c.s.M.App [StartupInfoLogger.java:61] Started App in 4.608 seconds (JVM running for 5.336)
+2021-06-26 14:33:41,712 INFO [4948] [main] c.c.s.L.SparkEventListener [SparkEventListener.java:19] Spark streaming started on Application startup..
+2021-06-26 14:34:42,074 INFO [65310] [Async-Clover-2] c.c.s.u.CloverHttpClientUtil [CloverHttpClientUtil.java:41] Executing the postHttpClient ...

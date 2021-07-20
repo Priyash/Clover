@@ -32,7 +32,7 @@ public class CassandraAsyncTemplateCustomTests {
 
     @Test
     public void shouldFetchProductInfo_WhenDoingSelectCall() {
-        BuiltStatement builtStatement = (BuiltStatement) QueryBuilder.select().all().from("product_keyspace", "product_table")
+        BuiltStatement builtStatement = (BuiltStatement) QueryBuilder.select().all().from("PRODUCT_DB_TEST", "PRODUCT_TBL_TEST")
                 .allowFiltering()
                 .limit(1000)
                 .setFetchSize(100)
@@ -56,8 +56,8 @@ public class CassandraAsyncTemplateCustomTests {
     @Test
     public void createAsyncProduct() {
         Product testProduct = new Product();
-        testProduct.setA(65);
-        testProduct.setB("105.9 Cubic Foot Compact Cube Office Refrigerators");
+//        testProduct.setA(65);
+//        testProduct.setB("105.9 Cubic Foot Compact Cube Office Refrigerators");
 
         ListenableFuture<EntityWriteResult<Product>> insertResultFuture = asyncCassandraTemplate.insert(testProduct, InsertOptions.builder().timeout(Duration.ofMillis(1000)).build());
         insertResultFuture.addCallback(new ListenableFutureCallback<EntityWriteResult<Product>>() {

@@ -1,6 +1,6 @@
 spring:
   kafka:
-    topics: cloverMessage
+    topics: product
     containerFactory: ProductKafkaListenerContainerFactory
     consumer:
         bootstrapServers: localhost:9092

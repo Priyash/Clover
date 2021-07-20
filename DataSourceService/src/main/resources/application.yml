@@ -1,0 +1,28 @@
+server:
+  port: 8096
+spring:
+  application:
+    name: DataSourceConfigService
+dataSource:
+  localhost: 127.0.0.1
+  port: 8096
+  KafkaConfig:
+    url: http://localhost:8080/publish
+  MongoConfig:
+    connectionString: mongodb://localhost:27017/
+    databaseName: PRODUCT
+  constants:
+    timeouts:
+      connectionTimeout: 30000
+      connectionRequestTimeout: 30000
+      socketTimeout: 60000
+      defaultKeepAliveTime: 20000
+      completableFutureTimeoutValue: 10000
+      cassandraInsertTimeout: 10000
+      sparkStreamingContextTimeout: 60000
+    connectionPool:
+      maxRouteConnections: 40
+      maxTotalConnections: 40
+      maxLocalHostConnections: 80
+    executor:
+      threadNamePrefix: Async-Clover-

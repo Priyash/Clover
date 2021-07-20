@@ -17,5 +17,6 @@ public class CassandraConfigLoader {
         private String duration;
         private boolean durableWrites;
         private String schema;
+        private String tableName;
     }
 }

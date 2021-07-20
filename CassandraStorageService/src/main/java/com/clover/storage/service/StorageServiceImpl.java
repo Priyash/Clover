@@ -4,7 +4,6 @@ import com.clover.storage.dao.ProductDAO;
 import com.clover.storage.model.Product;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +16,7 @@ public class StorageServiceImpl implements StorageService {
 
     @Override
     public void createProduct(Product product) {
-        log.info("Product id: {}", product.getA());
+        log.info("Product id: {}", product.getId());
         try {
             if(!ObjectUtils.isEmpty(product)){
                 productDAO.createProduct(product);

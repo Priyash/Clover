@@ -72,7 +72,7 @@ public class SparkConfigLoader {
             private Integer socketTimeout;
             private Integer defaultKeepAliveTime;
             private Integer completableFutureTimeoutValue;
-            private Integer cassandraInsertTimeout;
+            private Integer cassandraInsertOrUpdateTimeout;
             private Integer sparkStreamingContextTimeout;
 
         }

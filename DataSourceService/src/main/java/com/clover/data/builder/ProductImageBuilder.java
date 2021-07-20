@@ -2,9 +2,12 @@ package com.clover.data.builder;
 
 import com.clover.data.model.Product;
 import com.clover.data.model.ProductImage;
+import com.clover.data.model.ProductVariant;
+import com.clover.data.utility.CopyFields;
 import com.clover.data.utility.Generator;
 import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -71,12 +74,6 @@ public class ProductImageBuilder implements Builder<List<ProductImage>, Product>
         return null;
     }
 
-    @Override
-    public List<ProductImage> updateObject(Product product, Map<String, Object> objectMap) {
-        return null;
-    }
-
-
     private ProductImage buildProductImage(ProductImage partialProductImage) {
         ProductImage updatedProductImage = null;
         try {
@@ -89,6 +86,31 @@ public class ProductImageBuilder implements Builder<List<ProductImage>, Product>
         } catch (Exception ex) {
             log.error("Exception while updating partially generated product image id: {}, product_id: {}",
                                             partialProductImage.getId(), partialProductImage.getProduct_id(), ex);
+        }
+        return null;
+    }
+
+
+    @Override
+    public List<ProductImage> updateObject(Product product, Map<String, Object> objectMap) {
+        try {
+            List<ProductImage> dstImages = product.getImages();
+            List<Map<String,Object>> srcImages = (List<Map<String, Object>>) objectMap.get("images");
+            if(!ObjectUtils.isEmpty(srcImages) && !ObjectUtils.isEmpty(dstImages)){
+                srcImages.forEach(srcImage -> {
+                    dstImages.forEach(dstImage -> {
+                        if(srcImage.get("id").equals(dstImage.getId())) {
+                            String srcProductImageJsonMap = gson.toJson(srcImage);
+                            ProductImage srcProductImage = gson.fromJson(srcProductImageJsonMap, ProductImage.class);
+                            BeanUtils.copyProperties(srcProductImage, dstImage, CopyFields.getNullPropertyNames(srcProductImage));
+                            dstImage.setUpdated_at((String) timeStampGenerator.generate());
+                        }
+                    });
+                });
+            }
+            return dstImages;
+        } catch (Exception ex) {
+
         }
         return null;
     }

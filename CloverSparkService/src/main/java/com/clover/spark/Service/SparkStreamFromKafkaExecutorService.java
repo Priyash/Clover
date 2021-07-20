@@ -5,6 +5,7 @@ import com.clover.spark.Model.Product;
 import com.clover.spark.util.CassandraUtil;
 import com.google.gson.Gson;
 import kafka.serializer.StringDecoder;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.streaming.Durations;
@@ -20,6 +21,7 @@ import java.util.*;
 import java.util.concurrent.CompletionException;
 
 @Service
+@Slf4j
 public class SparkStreamFromKafkaExecutorService implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -55,7 +57,7 @@ public class SparkStreamFromKafkaExecutorService implements Serializable {
                     String.class, String.class,
                     StringDecoder.class, StringDecoder.class,
                     kafkaParams, topicSet);
-            System.out.println("Stream started!");
+            log.info("Spark stream started ....");
             //JavaPairInputDStream capture streams from kafkaUtils in chunks / batches , each chunks represent in form of RDD
             //conversion from RDD to List can be done using collect() method
             stream.foreachRDD(s -> {
@@ -63,7 +65,7 @@ public class SparkStreamFromKafkaExecutorService implements Serializable {
                 for (String topicData : topicDataSet) {
                     Product product = gson.fromJson(topicData, Product.class);
                     Map<String, Object> cassandraSaveResultMap = cassandraUtil.saveToCassandra(product);
-                    System.out.println("Cassandra Stream Insert Result Status : " + cassandraSaveResultMap.get(sparkConfigLoader.getHttpEntityName()));
+                    log.info("Cassandra Stream Insert Result Status: {} ", cassandraSaveResultMap.get(sparkConfigLoader.getHttpEntityName()));
                 }
             });
 

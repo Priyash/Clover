@@ -39,7 +39,7 @@ public class CloverHttpClientUtil {
 
     @Async("asyncTaskExecutor")
     public CompletableFuture<Map<String, Object>> postHttpClient(String URI, Object payload) throws IOException {
-        log.info("Post http client call of URI: {}, payload: {}", URI, payload.toString());
+        log.info("[postHttpClient]Post http client call of URI: {}, payload: {}", URI, payload.toString());
         Map<String, Object> httpMap = new HashMap<>();
         try {
             if(!StringUtils.isEmpty(URI) && (payload instanceof List)){
@@ -56,7 +56,7 @@ public class CloverHttpClientUtil {
 
                 System.out.println("Response Status : " + httpResponse.getStatusLine().getStatusCode());
                 HttpEntity entity = httpResponse.getEntity();
-                log.info("Post http client call response status: {}, entity: {]", httpResponse.getStatusLine().getStatusCode(), entity.getContent().toString());
+                log.info("[postHttpClient]Post http client call response status: {}, entity: {}", httpResponse.getStatusLine().getStatusCode(), entity.getContent().toString());
                 try {
                     if(!ObjectUtils.isEmpty(entity)){
                         String result = EntityUtils.toString(entity);
@@ -71,7 +71,7 @@ public class CloverHttpClientUtil {
                 }
             }
         } catch (Exception ex) {
-            log.error("Exception while invoking http post call of URI: {}", URI, ex);
+            log.error("[postHttpClient]Exception while invoking http post call of URI: {}", URI, ex);
         }
         return CompletableFuture.completedFuture(httpMap);
     }

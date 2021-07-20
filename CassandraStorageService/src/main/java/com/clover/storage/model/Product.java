@@ -1,34 +1,54 @@
 package com.clover.storage.model;
 
+import lombok.Data;
+import org.springframework.data.cassandra.core.cql.PrimaryKeyType;
+import org.springframework.data.cassandra.core.mapping.CassandraType;
 import org.springframework.data.cassandra.core.mapping.Column;
-import org.springframework.data.cassandra.core.mapping.PrimaryKey;
+import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.io.Serializable;
+import java.util.List;
 
-@Table("product_table")
+@Data
+@Table("product_tbl_test")
 public class Product implements Serializable {
-    @PrimaryKey("a")
-    private  int a;
+    private static final long serialVersionUID = 1L;
 
-    @Column("b")
-    private  String b;
+    @PrimaryKeyColumn(name = "id", type = PrimaryKeyType.PARTITIONED)
+    @CassandraType(type = CassandraType.Name.BIGINT)
+    private Long id;
 
-    public Product(){}
+    @Column("title")
+    @CassandraType(type = CassandraType.Name.TEXT)
+    private String title;
 
-    public int getA() {
-        return a;
-    }
+    @Column("description")
+    @CassandraType(type = CassandraType.Name.TEXT)
+    private String description;
 
-    public String getB() {
-        return b;
-    }
+    @Column("created_at")
+    @CassandraType(type = CassandraType.Name.TEXT)
+    private String created_at;
 
-    public void setA(int a) {
-        this.a = a;
-    }
+    @Column("updated_at")
+    @CassandraType(type = CassandraType.Name.TEXT)
+    private String updated_at;
 
-    public void setB(String b) {
-        this.b = b;
-    }
+    @Column("vendor")
+    @CassandraType(type = CassandraType.Name.TEXT)
+    private String vendor;
+
+    @Column("status")
+    @CassandraType(type = CassandraType.Name.TEXT)
+    private ProductStatus status;
+
+    @Column("options")
+    private List<ProductOption> options;
+
+    @Column("variants")
+    private List<ProductVariant> variants;
+
+    @Column("images")
+    private List<ProductImage> images;
 }

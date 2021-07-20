@@ -19,5 +19,4 @@ public class ProductVariant {
     private String option1;
     private String option2;
     private String option3;
-    private List<Long> variant_image_ids;
 }

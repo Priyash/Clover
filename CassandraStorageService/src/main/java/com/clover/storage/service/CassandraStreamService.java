@@ -1,7 +1,7 @@
 package com.clover.storage.service;
 
 import com.clover.storage.config.SparkConfigLoader;
-import com.clover.storage.model.Product;
+import com.clover.storage.model.*;
 import com.clover.storage.util.ElasticSearchUtil;
 import com.datastax.spark.connector.japi.CassandraRow;
 import com.datastax.spark.connector.japi.rdd.CassandraJavaRDD;
@@ -44,6 +44,9 @@ public class CassandraStreamService implements Serializable {
     @Autowired
     private transient ElasticSearchUtil elasticSearchUtil;
 
+    @Autowired
+    private transient ProductRowReader.ProductRowReaderFactory readerFactory;
+
     @Async("asyncTaskExecutor")
     public void startSparkStreamFromCassandraToElasticsearch() throws InterruptedException {
         try {
@@ -57,22 +60,14 @@ public class CassandraStreamService implements Serializable {
                                                                                         .getSparkStreamingContextTimeout())));
 
             javaStreamingContext.checkpoint(sparkConfigLoader.getCheckpoint());
-            CassandraJavaRDD<CassandraRow> cassandraJavaRDD = CassandraJavaUtil
-                                                                .javaFunctions(javaSparkContext)
-                                                                .cassandraTable(sparkConfigLoader.getCassandra().getKeyspace(),
-                                                                        sparkConfigLoader.getCassandra().getTable());
-            JavaRDD<Product> productJavaRDD = cassandraJavaRDD.map(new Function<CassandraRow, Product>() {
-                @Override
-                public Product call(CassandraRow cassandraRow) throws Exception {
-                    Product javaRDDProduct = new Product();
-                    javaRDDProduct.setA(cassandraRow.getInt("a"));
-                    javaRDDProduct.setB(cassandraRow.getString("b"));
-                    return javaRDDProduct;
-                }
-            });
+            CassandraJavaRDD<Product> cassandraJavaRDD = CassandraJavaUtil
+                                                        .javaFunctions(javaSparkContext)
+                                                        .cassandraTable(sparkConfigLoader.getCassandra().getKeyspace(),
+                                                                        sparkConfigLoader.getCassandra().getTable(),
+                                                                        readerFactory);
 
             //Getting the casandra table products data as list
-            List<Product> products = productJavaRDD.collect();
+            List<Product> products = cassandraJavaRDD.collect();
             log.info("[CassandraStreamService]Spark streaming context product size: {}", products.size());
             //Converting list to JavaRDD
             JavaRDD<Product> productRDD = javaStreamingContext.sparkContext().parallelize(products);
